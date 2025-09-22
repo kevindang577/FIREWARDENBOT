@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version='1.8'>
-  <world name="large_demo">
+  <world name="modified">
     <!-- Basic world setup  -->
     <plugin name='ignition::gazebo::systems::Physics' filename='ignition-gazebo-physics-system' />
     <plugin name='ignition::gazebo::systems::UserCommands' filename='ignition-gazebo-user-commands-system' />
@@ -240,9 +240,6 @@
       <name>pine6</name>
       <pose>-2.27195 -8.68441 0 0 -0 0.9</pose>
     </include>
-
-
-
 
     <!-- Dense oak cluster -->
     <include>
