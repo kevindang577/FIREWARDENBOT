@@ -6,6 +6,8 @@
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_ignition.launch.py
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_ignition_drone.launch.py
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_navigation.launch.py
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/mapping.py
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/navigation.py
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/project_progress.py
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/empty_grass.png
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/forest_overhead.png
