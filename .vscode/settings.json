@@ -1,3 +1,4 @@
 {
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "cmake.sourceDirectory": "/home/student/git/FIREWARDENBOT/World/41068_ws/src"
 }
