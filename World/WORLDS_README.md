@@ -91,7 +91,7 @@ ros2 launch 41068_ignition_bringup 41068_ignition_drone.launch.py world:=<world_
 4. **Expert**: Challenge with `obstacle_course` for precision flying
 5. **Real-world**: Test with `mixed_terrain` for varied elevation handling
 
-## Customisation 
+## Customisation  
 
 Each world can be modified by:
 1. Editing the `.sdf` file directly
@@ -129,4 +129,4 @@ source /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/setup.bash
 ros2 launch 41068_ignition_bringup 41068_ignition_drone.launch.py world:=your_world_name rviz:=false nav2:=false
 ```
 
-**Tip**: Use `rviz:=false nav2:=false` for faster testing without visualization and navigation components.
+**Tip**: Use `rviz:=false nav2:=false` for faster testing without visualisation and navigation components.
