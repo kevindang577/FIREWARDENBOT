@@ -91,7 +91,7 @@ ros2 launch 41068_ignition_bringup 41068_ignition_drone.launch.py world:=<world_
 4. **Expert**: Challenge with `obstacle_course` for precision flying
 5. **Real-world**: Test with `mixed_terrain` for varied elevation handling
 
-## Customisation
+## Customisation 
 
 Each world can be modified by:
 1. Editing the `.sdf` file directly
