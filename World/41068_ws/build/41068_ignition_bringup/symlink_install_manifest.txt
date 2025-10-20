@@ -28,8 +28,13 @@
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/top_plate.dae
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/wheel.dae
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/wheel.urdf.xacro
+/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/dense_forest.sdf
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/large_demo.sdf
+/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/mixed_terrain.sdf
+/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/obstacle_course.sdf
+/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/open_meadows.sdf
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/simple_trees.sdf
+/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/sparse_forest.sdf
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/package_run_dependencies/41068_ignition_bringup
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/parent_prefix_path/41068_ignition_bringup
 /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/ament_prefix_path.sh

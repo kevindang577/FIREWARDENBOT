@@ -20,7 +20,7 @@
       <direction>-0.5 0.1 -0.9</direction>
       <intensity>5</intensity>
     </light>
-    <gravity>0 0 0</gravity>
+    <gravity>0 0 -9.81</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type="adiabatic"/>
     <physics name="default_physics" type="ignored">
@@ -239,43 +239,6 @@
       </uri>
       <name>pine6</name>
       <pose>-2.27195 -8.68441 0 0 -0 0.9</pose>
-    </include>
-
-
-
-
-    <!-- Dense oak cluster -->
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Oak%20tree</uri>
-      <name>oak_cluster1</name>
-      <pose>-7.5 -8.0 -0.3 0 0 0.2</pose>
-    </include>
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Oak%20tree</uri>
-      <name>oak_cluster2</name>
-      <pose>-8.2 -9.1 -0.3 0 0 -0.4</pose>
-    </include>
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Oak%20tree</uri>
-      <name>oak_cluster3</name>
-      <pose>-6.8 -10.0 -0.3 0 0 0.6</pose>
-    </include>
-
-    <!-- Dense pine cluster -->
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20tree</uri>
-      <name>pine_cluster1</name>
-      <pose>-5.5 -8.5 0 0 0 -0.2</pose>
-    </include>
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20tree</uri>
-      <name>pine_cluster2</name>
-      <pose>-7.0 -11.0 0 0 0 0.3</pose>
-    </include>
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine%20tree</uri>
-      <name>pine_cluster3</name>
-      <pose>-8.5 -10.5 0 0 0 0.5</pose>
     </include>
 
     <!-- Platypus -->

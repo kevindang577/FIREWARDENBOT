@@ -32,9 +32,14 @@
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/top_plate.dae
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/wheel.dae
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/wheel.urdf.xacro
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/dense_forest.sdf
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/large_demo.sdf
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/mixed_terrain.sdf
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/modified.sdf
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/obstacle_course.sdf
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/open_meadows.sdf
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/simple_trees.sdf
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/sparse_forest.sdf
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf_drone/common_properties.urdf.xacro
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf_drone/meshes/hull.dae
 /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf_drone/meshes/propeller_fl.dae
