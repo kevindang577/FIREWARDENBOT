@@ -56,11 +56,32 @@ This README describes the various world environments available for drone navigat
   - Tight turn section
 - **Trees**: Precisely positioned for navigation challenges
 
+## Quick Start
+
+### Launch a world immediately:
+
+**For Husky Robot:**
+```bash
+cd /home/student/git/FIREWARDENBOT/World/41068_ws
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=open_meadows
+```
+
+**For Drone:**
+```bash
+cd /home/student/git/FIREWARDENBOT/World/WorldWithDrone
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 launch 41068_ignition_bringup 41068_ignition_drone.launch.py world:=open_meadows rviz:=false nav2:=false
+```
+
 ## Usage
 
 ### For Husky Robot (from 41068_ws):
 ```bash
 cd /home/student/git/FIREWARDENBOT/World/41068_ws
+source /opt/ros/humble/setup.bash
 source /home/student/git/FIREWARDENBOT/World/41068_ws/install/setup.bash
 ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=<world_name>
 ```
@@ -68,6 +89,7 @@ ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=<world_name>
 ### For Drone (from WorldWithDrone):
 ```bash
 cd /home/student/git/FIREWARDENBOT/World/WorldWithDrone
+source /opt/ros/humble/setup.bash
 source /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/setup.bash
 ros2 launch 41068_ignition_bringup 41068_ignition_drone.launch.py world:=<world_name> rviz:=false nav2:=false
 ```
@@ -116,6 +138,7 @@ After creating or modifying worlds, rebuild the appropriate workspace:
 ### For Husky Robot:
 ```bash
 cd /home/student/git/FIREWARDENBOT/World/41068_ws
+source /opt/ros/humble/setup.bash  # Source ROS 2 first
 colcon build
 source /home/student/git/FIREWARDENBOT/World/41068_ws/install/setup.bash
 ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=your_world_name
@@ -124,10 +147,65 @@ ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=your_world_na
 ### For Drone:
 ```bash
 cd /home/student/git/FIREWARDENBOT/World/WorldWithDrone
+source /opt/ros/humble/setup.bash  # Source ROS 2 first
 colcon build
 source /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/setup.bash
 ros2 launch 41068_ignition_bringup 41068_ignition_drone.launch.py world:=your_world_name rviz:=false nav2:=false
 ```
 
-**Tip**: Use `rviz:=false nav2:=false` for faster testing without visualisation and navigation components.
-  
+**Important**: Always source `/opt/ros/humble/setup.bash` before building to ensure CMake can find ROS 2 packages.
+
+## Troubleshooting
+
+### "Package name does not follow naming conventions"
+This is just a warning about the package name `41068_ignition_bringup` starting with numbers. It doesn't prevent the package from working - you can safely ignore this warning.
+
+### "Package '41068_ignition_bringup' not found"
+This means the workspace isn't sourced. Always run these commands in order:
+```bash
+cd /home/student/git/FIREWARDENBOT/World/41068_ws  # or WorldWithDrone
+source /opt/ros/humble/setup.bash                   # Source ROS 2 first
+source install/setup.bash                           # Source your workspace
+```
+
+### "install/setup.bash: No such file or directory"
+The workspace hasn't been built yet. Build it first:
+```bash
+source /opt/ros/humble/setup.bash
+colcon build
+source install/setup.bash
+```
+
+### "Duplicate package names not supported"
+You're trying to build from the wrong directory. Multiple copies of the same package exist in different locations. Always build from within the specific workspace:
+
+```bash
+# DO not build from home directory girl
+cd ~
+colcon build  # This will cause duplicate package errors
+
+# ✅ DO build from the specific workspace
+cd /home/student/git/FIREWARDENBOT/World/41068_ws
+colcon build  # This works correctly
+```
+
+### Complete workflow from scratch:
+```bash
+# 1. Navigate to workspace
+cd /home/student/git/FIREWARDENBOT/World/41068_ws
+
+# 2. Source ROS 2
+source /opt/ros/humble/setup.bash
+
+# 3. Build workspace
+colcon build
+
+# 4. Source workspace
+source install/setup.bash
+
+# 5. Launch world
+ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=open_meadows
+```
+
+## launching (exanple sparse_forest)
+bash -c "cd /home/student/git/FIREWARDENBOT/World/41068_ws && source /opt/ros/humble/setup.bash && source install/setup.bash && ros2 launch 41068_ignition_bringup 41068_ignition.launch.py world:=sparse_forest"
