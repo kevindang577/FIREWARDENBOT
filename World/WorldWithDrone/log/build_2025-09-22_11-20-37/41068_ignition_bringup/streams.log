@@ -1,0 +1,63 @@
+[0.021s] Invoking command in '/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/student/git/FIREWARDENBOT/World/WorldWithDrone/src -DCMAKE_INSTALL_PREFIX=/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup
+[0.908s] -- The C compiler identification is GNU 11.4.0
+[1.473s] -- The CXX compiler identification is GNU 11.4.0
+[1.516s] -- Detecting C compiler ABI info
+[1.656s] -- Detecting C compiler ABI info - done
+[1.672s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.677s] -- Detecting C compile features
+[1.686s] -- Detecting C compile features - done
+[1.694s] -- Detecting CXX compiler ABI info
+[1.893s] -- Detecting CXX compiler ABI info - done
+[1.909s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.909s] -- Detecting CXX compile features
+[1.910s] -- Detecting CXX compile features - done
+[1.949s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.177s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.327s] -- Found ros_ign_interfaces: 0.244.20 (/opt/ros/humble/share/ros_ign_interfaces/cmake)
+[2.432s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.446s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.463s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.511s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.553s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.700s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.770s] WARNING: Package name "41068_ignition_bringup" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[2.817s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.849s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.849s] -- Configured cppcheck include dirs: 
+[2.849s] -- Configured cppcheck exclude dirs and/or files: 
+[2.882s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.883s] -- Configured cpplint exclude dirs and/or files: 
+[2.888s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.895s] -- Added test 'lint_cmake' to check CMake code style
+[2.901s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.935s] -- Added test 'uncrustify' to check C / C++ code style
+[2.936s] -- Configured uncrustify additional arguments: 
+[2.940s] -- Added test 'xmllint' to check XML markup files
+[2.944s] -- Configuring done
+[2.950s] -- Generating done
+[2.952s] -- Build files have been written to: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup
+[2.966s] Invoked command in '/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/student/git/FIREWARDENBOT/World/WorldWithDrone/src -DCMAKE_INSTALL_PREFIX=/home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup
+[2.969s] Invoking command in '/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup -- -j8 -l8
+[3.022s] Invoked command in '/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup -- -j8 -l8
+[3.040s] Invoking command in '/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup
+[3.052s] -- Install configuration: ""
+[3.053s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/config
+[3.053s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/launch
+[3.053s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models
+[3.053s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials/textures
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials
+[3.054s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures
+[3.055s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf
+[3.055s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes
+[3.055s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds
+[3.055s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf_drone
+[3.055s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf_drone/thumbnails
+[3.055s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf_drone/meshes
+[3.055s] -- Installing: /home/student/git/FIREWARDENBOT/World/WorldWithDrone/install/41068_ignition_bringup/share/41068_ignition_bringup/package.dsv
+[3.057s] Invoked command in '/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup
