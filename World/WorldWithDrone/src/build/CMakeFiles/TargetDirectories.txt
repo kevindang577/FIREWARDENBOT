@@ -1,0 +1,9 @@
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/uninstall.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/41068_ignition_bringup_uninstall.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/test.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/edit_cache.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/rebuild_cache.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/list_install_components.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/install.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/install/local.dir
+/home/student/git/FIREWARDENBOT/World/WorldWithDrone/src/build/CMakeFiles/install/strip.dir
