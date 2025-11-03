@@ -3,6 +3,7 @@
   <xacro:include filename="$(find 41068_ignition_bringup)/urdf/common_properties.urdf.xacro"/>
   <xacro:include filename="$(find 41068_ignition_bringup)/urdf/husky.gazebo.xacro"/>
   <xacro:include filename="$(find 41068_ignition_bringup)/urdf/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find 41068_ignition_bringup)/urdf/camera_sensors.urdf.xacro"/>
 
   <xacro:property name="r200_cam_rgb_px" value="0.005"/>
   <xacro:property name="r200_cam_rgb_py" value="0.018"/>
@@ -180,5 +181,25 @@
     <child link="camera_depth_optical_frame"/>
   </joint>
   <link name="camera_depth_optical_frame"/>
+
+  <!-- Computer Vision Sensors for Fire Warden Bot -->
+  
+  <!-- Main RGB camera for fire detection -->
+  <xacro:rgb_camera name="husky_camera" parent_link="top_plate_link" 
+                   xyz="0.3 0 0.1" rpy="0 0.2 0"/>
+  
+  <!-- Thermal camera for heat signature detection -->
+  <xacro:thermal_camera name="husky_thermal_camera" parent_link="top_plate_link" 
+                       xyz="0.3 0.1 0.1" rpy="0 0.2 0"/>
+  
+  <!-- Stereo cameras for depth perception -->
+  <xacro:rgb_camera name="husky_camera_left" parent_link="top_plate_link" 
+                   xyz="0.25 0.05 0.15" rpy="0 0 0"/>
+  <xacro:rgb_camera name="husky_camera_right" parent_link="top_plate_link" 
+                   xyz="0.25 -0.05 0.15" rpy="0 0 0"/>
+  
+  <!-- Wide-angle surveillance camera -->
+  <xacro:rgb_camera name="husky_wide_camera" parent_link="top_plate_link" 
+                   xyz="0.2 0 0.2" rpy="0 -0.3 0"/>
 
 </robot>

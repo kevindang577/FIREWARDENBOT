@@ -1,0 +1,1 @@
+cv_bridge:geometry_msgs:image_transport:opencv4:python3-numpy:python3-opencv:python3-scipy:python3-sklearn:python3-torch:python3-torchvision:rclcpp:rclpy:ros_ign_bridge:ros_ign_gazebo:sensor_msgs:std_msgs:tf2:tf2_geometry_msgs:tf2_ros:vision_msgs

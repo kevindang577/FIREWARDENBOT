@@ -1,0 +1,4 @@
+source;share/firewardenbot_vision/local_setup.bash
+source;share/firewardenbot_vision/local_setup.dsv
+source;share/firewardenbot_vision/local_setup.sh
+source;share/firewardenbot_vision/local_setup.zsh
