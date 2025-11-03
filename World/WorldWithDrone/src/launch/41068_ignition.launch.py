@@ -1,128 +1,183 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition
-from launch.substitutions import (Command, LaunchConfiguration,
-                                  PathJoinSubstitution)
+from launch.substitutions import (
+    Command,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+)
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-
     ld = LaunchDescription()
 
-    # Get paths to directories
     pkg_path = FindPackageShare('41068_ignition_bringup')
-    config_path = PathJoinSubstitution([pkg_path,
-                                       'config'])
+    config_path = PathJoinSubstitution([pkg_path, 'config'])
 
-    # Additional command line arguments
-    use_sim_time_launch_arg = DeclareLaunchArgument(
+    # ----------------------------------
+    # Launch args
+    # ----------------------------------
+    use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='True',
-        description='Flag to enable use_sim_time'
+        default_value='true',
+        description='Use simulation (Gazebo) clock',
     )
-    use_sim_time = LaunchConfiguration('use_sim_time')
-    ld.add_action(use_sim_time_launch_arg)
-    rviz_launch_arg = DeclareLaunchArgument(
+    rviz_arg = DeclareLaunchArgument(
         'rviz',
-        default_value='False',
-        description='Flag to launch RViz'
+        default_value='false',
+        description='Launch RViz2',
     )
-    ld.add_action(rviz_launch_arg)
-    nav2_launch_arg = DeclareLaunchArgument(
+    nav2_arg = DeclareLaunchArgument(
         'nav2',
-        default_value='True',
-        description='Flag to launch Nav2'
+        default_value='true',
+        description='Launch Nav2 stack',
     )
-    ld.add_action(nav2_launch_arg)
+    world_arg = DeclareLaunchArgument(
+        'world',
+        default_value='modified',
+        description='World to load',
+        choices=[
+            'simple_trees',
+            'large_demo',
+            'sparse_forest',
+            'dense_forest',
+            'mixed_terrain',
+            'open_meadows',
+            'obstacle_course',
+            'modified',
+        ],
+    )
 
-    # Load robot_description and start robot_state_publisher
-    robot_description_content = ParameterValue(
-        Command(['xacro ',
-                 PathJoinSubstitution([pkg_path,
-                                       'urdf',
-                                       'husky.urdf.xacro'])]),
-        value_type=str)
-    robot_state_publisher_node = Node(package='robot_state_publisher',
-                                      executable='robot_state_publisher',
-                                      parameters=[{
-                                          'robot_description': robot_description_content,
-                                          'use_sim_time': use_sim_time
-                                      }])
-    ld.add_action(robot_state_publisher_node)
+    ld.add_action(use_sim_time_arg)
+    ld.add_action(rviz_arg)
+    ld.add_action(nav2_arg)
+    ld.add_action(world_arg)
 
-    # Publish odom -> base_link transform **using robot_localization**
-    robot_localization_node = Node(
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    world_name = LaunchConfiguration('world')
+
+    # ----------------------------------
+    # Robot description (DRONE, not husky)
+    # ----------------------------------
+    drone_xacro = PathJoinSubstitution([
+        pkg_path,
+        'urdf_drone',
+        'parrot.urdf.xacro'
+    ])
+
+    robot_description = ParameterValue(
+        Command(['xacro ', drone_xacro]),
+        value_type=str
+    )
+
+    robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        parameters=[{
+            'robot_description': robot_description,
+            'use_sim_time': use_sim_time,
+        }],
+        output='screen'
+    )
+    ld.add_action(robot_state_publisher)
+
+    # ----------------------------------
+    # robot_localization (gives odom->base_link etc.)
+    # ----------------------------------
+    ekf_node = Node(
         package='robot_localization',
         executable='ekf_node',
         name='robot_localization',
         output='screen',
-        parameters=[PathJoinSubstitution([config_path,
-                                          'robot_localization.yaml']),
-                    {'use_sim_time': use_sim_time}]
+        parameters=[
+            PathJoinSubstitution([config_path, 'robot_localization.yaml']),
+            {'use_sim_time': use_sim_time},
+        ],
     )
-    ld.add_action(robot_localization_node)
+    ld.add_action(ekf_node)
 
-    # Start Gazebo to simulate the robot in the chosen world
-    world_launch_arg = DeclareLaunchArgument(
-        'world',
-        default_value='simple_trees',
-        description='Which world to load',
-        choices=['simple_trees', 'large_demo', 'sparse_forest', 'dense_forest', 'mixed_terrain', 'open_meadows', 'obstacle_course']
-    )
-    ld.add_action(world_launch_arg)
+    # ----------------------------------
+    # Start Ignition/Gazebo with chosen world
+    # ----------------------------------
+    world_path = PathJoinSubstitution([
+        pkg_path,
+        'worlds',
+        world_name.perform  # this is how you logically think about it
+    ])
+    # BUT in launch substitutions we do:
+    world_path = PathJoinSubstitution([
+        pkg_path,
+        'worlds',
+        LaunchConfiguration('world') + '.sdf'
+    ])
+
     gazebo = IncludeLaunchDescription(
-        PathJoinSubstitution([FindPackageShare('ros_ign_gazebo'),
-                             'launch', 'ign_gazebo.launch.py']),
+        PathJoinSubstitution([
+            FindPackageShare('ros_ign_gazebo'),
+            'launch',
+            'ign_gazebo.launch.py'
+        ]),
         launch_arguments={
-            'ign_args': [PathJoinSubstitution([pkg_path,
-                                               'worlds',
-                                               [LaunchConfiguration('world'), '.sdf']]),
-                         ' -r']}.items()
+            'ign_args': [world_path, ' -r']
+        }.items()
     )
     ld.add_action(gazebo)
 
-    # Spawn robot in Gazebo
-    robot_spawner = Node(
+    # ----------------------------------
+    # Spawn the drone
+    # ----------------------------------
+    spawn_drone = Node(
         package='ros_ign_gazebo',
         executable='create',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time}],
-        arguments=['-topic', '/robot_description', '-z', '0.4']
+        # spawn what robot_state_publisher is publishing
+        arguments=['-topic', '/robot_description', '-name', 'drone', '-z', '1.0']
     )
-    ld.add_action(robot_spawner)
+    ld.add_action(spawn_drone)
 
-    # Bridge topics between gazebo and ROS2
-    gazebo_bridge = Node(
+    # ----------------------------------
+    # Bridge (we extended gazebo_bridge.yaml earlier to add /drone/*)
+    # ----------------------------------
+    bridge = Node(
         package='ros_ign_bridge',
         executable='parameter_bridge',
-        parameters=[{'config_file': PathJoinSubstitution([config_path,
-                                                          'gazebo_bridge.yaml']),
-                    'use_sim_time': use_sim_time}]
+        parameters=[{
+            'config_file': PathJoinSubstitution([config_path, 'gazebo_bridge.yaml']),
+            'use_sim_time': use_sim_time,
+        }],
+        output='screen'
     )
-    ld.add_action(gazebo_bridge)
+    ld.add_action(bridge)
 
-    # rviz2 visualises data
+    # ----------------------------------
+    # RViz (optional)
+    # ----------------------------------
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time}],
-        arguments=['-d', PathJoinSubstitution([config_path,
-                                               '41068.rviz'])],
+        arguments=['-d', PathJoinSubstitution([config_path, '41068.rviz'])],
         condition=IfCondition(LaunchConfiguration('rviz'))
     )
     ld.add_action(rviz_node)
 
-    # Nav2 enables mapping and waypoint following
+    # ----------------------------------
+    # Nav2 (optional) – point this at the drone params we made
+    # ----------------------------------
     nav2 = IncludeLaunchDescription(
-        PathJoinSubstitution([pkg_path,
-                              'launch',
-                              '41068_navigation.launch.py']),
+        PathJoinSubstitution([
+            FindPackageShare('nav2_bringup'),
+            'launch',
+            'navigation_launch.py'
+        ]),
         launch_arguments={
-            'use_sim_time': use_sim_time
+            'use_sim_time': use_sim_time,
+            'params_file': PathJoinSubstitution([config_path, 'nav2_drone.yaml']),
         }.items(),
         condition=IfCondition(LaunchConfiguration('nav2'))
     )
