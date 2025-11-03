@@ -83,4 +83,34 @@ def generate_launch_description():
     )
     ld.add_action(rviz)
 
+    nav2 = IncludeLaunchDescription(
+        PathJoinSubstitution([FindPackageShare('nav2_bringup'),
+                              'launch', 'bringup_launch.py']),
+        launch_arguments={
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'slam': 'False',
+            'params_file': PathJoinSubstitution([
+                config_path, 'nav2_params.yaml'
+            ])
+        }.items()
+    )
+    ld.add_action(nav2)
+
+    from launch_ros.actions import Node
+
+    explorer = Node(
+        package='nav2_explore',
+        executable='explore_node',
+        name='explore',
+        output='screen',
+        parameters=[{
+            'use_sim_time': True,
+            'planner_frequency': 1.0,
+            'progress_timeout': 30.0,
+            'visualize': True
+        }]
+    )
+    ld.add_action(explorer)
+
     return ld
+
