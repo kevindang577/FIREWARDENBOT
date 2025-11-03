@@ -1,0 +1,125 @@
+[0.058s] Invoking command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/student/git/FIREWARDENBOT/World/41068_ws/src -DCMAKE_INSTALL_PREFIX=/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup
+[0.203s] -- The C compiler identification is GNU 11.4.0
+[0.367s] -- The CXX compiler identification is GNU 11.4.0
+[0.381s] -- Detecting C compiler ABI info
+[0.616s] -- Detecting C compiler ABI info - done
+[0.644s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.659s] -- Detecting C compile features
+[0.661s] -- Detecting C compile features - done
+[0.671s] -- Detecting CXX compiler ABI info
+[0.929s] -- Detecting CXX compiler ABI info - done
+[0.976s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.978s] -- Detecting CXX compile features
+[0.983s] -- Detecting CXX compile features - done
+[1.017s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.452s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.650s] -- Found ros_ign_interfaces: 0.244.20 (/opt/ros/humble/share/ros_ign_interfaces/cmake)
+[1.825s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.840s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.858s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.898s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.936s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.264s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[2.369s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[2.433s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.440s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.643s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.752s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.886s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.925s] -- Looking for pthread.h
+[3.095s] -- Looking for pthread.h - found
+[3.095s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.350s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.351s] -- Found Threads: TRUE  
+[3.511s] -- Found vision_msgs: 4.1.1 (/opt/ros/humble/share/vision_msgs/cmake)
+[3.543s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.702s] WARNING: Package name "41068_ignition_bringup" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[3.753s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.788s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.790s] -- Configured cppcheck include dirs: 
+[3.790s] -- Configured cppcheck exclude dirs and/or files: 
+[3.820s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.820s] -- Configured cpplint exclude dirs and/or files: 
+[3.821s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.831s] -- Added test 'lint_cmake' to check CMake code style
+[3.832s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.855s] -- Added test 'uncrustify' to check C / C++ code style
+[3.855s] -- Configured uncrustify additional arguments: 
+[3.859s] -- Added test 'xmllint' to check XML markup files
+[3.861s] -- Configuring done
+[3.872s] -- Generating done
+[3.886s] -- Build files have been written to: /home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup
+[3.940s] Invoked command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/student/git/FIREWARDENBOT/World/41068_ws/src -DCMAKE_INSTALL_PREFIX=/home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup
+[3.941s] Invoking command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup -- -j8 -l8
+[4.053s] Invoked command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup -- -j8 -l8
+[4.067s] Invoking command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup
+[4.081s] -- Install configuration: ""
+[4.082s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config
+[4.082s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/gazebo_bridge.yaml
+[4.082s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/slam_params.yaml
+[4.082s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/nav2_params.yaml
+[4.087s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/robot_localization.yaml
+[4.087s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/41068.rviz
+[4.091s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/launch
+[4.091s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_navigation.launch.py
+[4.092s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_ignition.launch.py
+[4.092s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models
+[4.092s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane
+[4.092s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/model.config
+[4.097s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/model.sdf
+[4.102s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials
+[4.102s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials/textures
+[4.103s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials/textures/empty_grass.png
+[4.176s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane
+[4.176s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/model.config
+[4.176s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/model.sdf
+[4.176s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials
+[4.176s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures
+[4.176s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/forest_overhead.png
+[4.178s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/empty_grass.png
+[4.277s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/leaf_litter.png
+[4.340s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall
+[4.340s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/model.config
+[4.352s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/model.sdf
+[4.352s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials
+[4.352s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures
+[4.352s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures/forest_wall_transparent.png
+[4.401s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures/forest_wall_transparent_small.png
+[4.409s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures/forest_wall.png
+[4.491s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf
+[4.491s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/common_properties.urdf.xacro
+[4.491s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes
+[4.491s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/top_plate.dae
+[4.495s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/bumper.dae
+[4.512s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/base_link.dae
+[4.530s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/jpl04_arch_nosensor.stl
+[4.541s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/top_chassis.dae
+[4.579s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/wheel.dae
+[4.638s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/camera_sensors.urdf.xacro
+[4.642s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/wheel.urdf.xacro
+[4.642s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/husky.urdf.xacro
+[4.642s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/husky.gazebo.xacro
+[4.642s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds
+[4.643s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/simple_trees.sdf
+[4.645s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/open_meadows.sdf
+[4.645s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/mixed_terrain.sdf
+[4.645s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/sparse_forest.sdf
+[4.646s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/obstacle_course.sdf
+[4.646s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/dense_forest.sdf
+[4.650s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/large_demo.sdf
+[4.653s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/package_run_dependencies/41068_ignition_bringup
+[4.654s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/parent_prefix_path/41068_ignition_bringup
+[4.654s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/ament_prefix_path.sh
+[4.654s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/ament_prefix_path.dsv
+[4.654s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/path.sh
+[4.654s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/path.dsv
+[4.655s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.bash
+[4.656s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.sh
+[4.657s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.zsh
+[4.658s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.dsv
+[4.659s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/package.dsv
+[4.660s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/packages/41068_ignition_bringup
+[4.661s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/cmake/41068_ignition_bringupConfig.cmake
+[4.661s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/cmake/41068_ignition_bringupConfig-version.cmake
+[4.661s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/package.xml
+[4.668s] Invoked command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup

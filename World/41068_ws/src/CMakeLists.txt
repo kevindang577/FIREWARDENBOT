@@ -10,6 +10,11 @@ find_package(ament_cmake REQUIRED)
 
 find_package(ros_ign_interfaces REQUIRED)
 
+# Computer vision dependencies
+find_package(cv_bridge REQUIRED)
+find_package(image_transport REQUIRED)
+find_package(vision_msgs REQUIRED)
+
 install(
   DIRECTORY config launch models urdf worlds
   DESTINATION share/${PROJECT_NAME}
