@@ -35,19 +35,20 @@ def generate_launch_description():
         default_value='true',
         description='Flag to launch Nav2'
     )
+    # include the .sdf in the choices so we don't have to do string math
     world_arg = DeclareLaunchArgument(
         'world',
-        default_value='simple_trees',
+        default_value='simple_trees.sdf',
         description='Which world to load',
         choices=[
-            'simple_trees',
-            'large_demo',
-            'sparse_forest',
-            'dense_forest',
-            'mixed_terrain',
-            'open_meadows',
-            'obstacle_course',
-            'modified',  # since you have this
+            'simple_trees.sdf',
+            'large_demo.sdf',
+            'sparse_forest.sdf',
+            'dense_forest.sdf',
+            'mixed_terrain.sdf',
+            'open_meadows.sdf',
+            'obstacle_course.sdf',
+            'modified.sdf',
         ],
     )
     # let you override nav2 params (default = drone)
@@ -71,10 +72,14 @@ def generate_launch_description():
     # robot_description (drone)
     # --------------------
     robot_description_content = ParameterValue(
-        Command(['xacro ',
-                 PathJoinSubstitution([pkg_path,
-                                       'urdf_drone',
-                                       'parrot.urdf.xacro'])]),
+        Command([
+            'xacro ',
+            PathJoinSubstitution([
+                pkg_path,
+                'urdf_drone',
+                'parrot.urdf.xacro'
+            ])
+        ]),
         value_type=str
     )
     robot_state_publisher_node = Node(
@@ -112,9 +117,9 @@ def generate_launch_description():
             'ign_gazebo.launch.py'
         ]),
         launch_arguments={
-            # this is the correct way to build <pkg>/worlds/<world>.sdf
+            # build <pkg>/worlds/<world> directly
             'ign_args': [
-                PathJoinSubstitution([pkg_path, 'worlds', world + '.sdf']),
+                PathJoinSubstitution([pkg_path, 'worlds', world]),
                 ' -r'
             ]
         }.items()

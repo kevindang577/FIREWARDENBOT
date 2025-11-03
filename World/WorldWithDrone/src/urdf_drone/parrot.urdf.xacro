@@ -18,12 +18,14 @@
                iyy="1.764e-3" iyz="3.595e-7"
                izz="3.328e-3" />
     </inertial>
-<!--     <collision name="collision">
-      <origin xyz="-0.00424 0.00014 -0.00595" rpy="0 0 0"/>
+    
+    <collision name="collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size="0.5 0.5 0.2"/>
+        <box size="0.3 0.3 0.1"/>
       </geometry>
-    </collision> -->
+    </collision>
+
     <visual name="hull">
       <geometry>
         <mesh filename="file://$(find 41068_ignition_bringup)/urdf_drone/meshes/hull.dae"/>
