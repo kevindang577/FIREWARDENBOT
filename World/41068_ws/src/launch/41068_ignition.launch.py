@@ -66,13 +66,13 @@ def generate_launch_description():
     ld.add_action(robot_localization_node)
 
     # Start Gazebo to simulate the robot in the chosen world
-    world_launch_arg = DeclareLaunchArgument(
+    world_arg = DeclareLaunchArgument(
         'world',
         default_value='simple_trees',
-        description='Which world to load',
-        choices=['simple_trees', 'large_demo', 'sparse_forest', 'dense_forest', 'mixed_terrain', 'open_meadows', 'obstacle_course']
+        choices=['simple_trees', 'large_demo', 'sparse_forest', 'dense_forest', 'mixed_terrain', 'open_meadows', 'obstacle_course'],
+        description='World to launch'
     )
-    ld.add_action(world_launch_arg)
+    ld.add_action(world_arg)
     gazebo = IncludeLaunchDescription(
         PathJoinSubstitution([FindPackageShare('ros_ign_gazebo'),
                              'launch', 'ign_gazebo.launch.py']),
