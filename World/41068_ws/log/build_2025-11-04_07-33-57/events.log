@@ -1,0 +1,425 @@
+[0.000000] (-) TimerEvent: {}
+[0.000689] (41068_ignition_bringup) JobQueued: {'identifier': '41068_ignition_bringup', 'dependencies': OrderedDict()}
+[0.000857] (firewardenbot_vision) JobQueued: {'identifier': 'firewardenbot_vision', 'dependencies': OrderedDict()}
+[0.000904] (41068_ignition_bringup) JobStarted: {'identifier': '41068_ignition_bringup'}
+[0.054451] (firewardenbot_vision) JobStarted: {'identifier': 'firewardenbot_vision'}
+[0.060519] (41068_ignition_bringup) JobProgress: {'identifier': '41068_ignition_bringup', 'progress': 'cmake'}
+[0.068470] (41068_ignition_bringup) JobProgress: {'identifier': '41068_ignition_bringup', 'progress': 'build'}
+[0.069577] (41068_ignition_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup', '--', '-j8', '-l8'], 'cwd': '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('SSH_AGENT_PID', '3164'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/student/git/FIREWARDENBOT'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '3062'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3277'), ('BUNDLED_DEBUGPY_PATH', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('XRDP_PULSE_SOURCE_SOCKET', 'xrdp_chansrv_audio_in_socket_10'), ('XRDP_PULSE_SINK_SOCKET', 'xrdp_chansrv_audio_out_socket_10'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3765'), ('PULSE_SCRIPT', '/etc/xrdp/pulse/default.pa'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/student/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('JOURNAL_STREAM', '8:21347'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/labNVXMF8:@/tmp/.ICE-unix/3253,unix/labNVXMF8:/tmp/.ICE-unix/3253'), ('INVOCATION_ID', '5641f2211fda4e9da402bea0b730af28'), ('XDG_MENU_PREFIX', 'gnome-'), ('XRDP_SOCKET_PATH', '/run/xrdp/sockdir'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':10.0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-a5663b2c4f5c7f8e.txt'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/student/.config/Code/User/workspaceStorage/66ac5f533abb593a7bd8067f2098e24d/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1002/vscode-git-f44497d75e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'Unity'), ('UID', '1002'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('XRDP_SESSION', '1'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('SGX_AESM_ADDR', '1'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.092003] (firewardenbot_vision) JobProgress: {'identifier': 'firewardenbot_vision', 'progress': 'cmake'}
+[0.099592] (-) TimerEvent: {}
+[0.100329] (firewardenbot_vision) JobProgress: {'identifier': 'firewardenbot_vision', 'progress': 'build'}
+[0.101305] (firewardenbot_vision) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision', '--', '-j8', '-l8'], 'cwd': '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('SSH_AGENT_PID', '3164'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/student/git/FIREWARDENBOT'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '3062'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3277'), ('BUNDLED_DEBUGPY_PATH', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('XRDP_PULSE_SOURCE_SOCKET', 'xrdp_chansrv_audio_in_socket_10'), ('XRDP_PULSE_SINK_SOCKET', 'xrdp_chansrv_audio_out_socket_10'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3765'), ('PULSE_SCRIPT', '/etc/xrdp/pulse/default.pa'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/student/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('JOURNAL_STREAM', '8:21347'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/labNVXMF8:@/tmp/.ICE-unix/3253,unix/labNVXMF8:/tmp/.ICE-unix/3253'), ('INVOCATION_ID', '5641f2211fda4e9da402bea0b730af28'), ('XDG_MENU_PREFIX', 'gnome-'), ('XRDP_SOCKET_PATH', '/run/xrdp/sockdir'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':10.0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-a5663b2c4f5c7f8e.txt'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/student/.config/Code/User/workspaceStorage/66ac5f533abb593a7bd8067f2098e24d/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1002/vscode-git-f44497d75e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'Unity'), ('UID', '1002'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('XRDP_SESSION', '1'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('SGX_AESM_ADDR', '1'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.142630] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199748] (-) TimerEvent: {}
+[0.272549] (firewardenbot_vision) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299148] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found ros_ign_interfaces: 0.244.20 (/opt/ros/humble/share/ros_ign_interfaces/cmake)\n'}
+[0.299859] (-) TimerEvent: {}
+[0.331046] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.335474] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.348947] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.357722] (41068_ignition_bringup) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.371783] (41068_ignition_bringup) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.399975] (-) TimerEvent: {}
+[0.448839] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.489557] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[0.495364] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.499667] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.500036] (-) TimerEvent: {}
+[0.507324] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.517577] (firewardenbot_vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.525289] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[0.535179] (firewardenbot_vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.547351] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.549033] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.570699] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.571972] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600236] (-) TimerEvent: {}
+[0.669562] (41068_ignition_bringup) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.688356] (firewardenbot_vision) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.700346] (-) TimerEvent: {}
+[0.738342] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found vision_msgs: 4.1.1 (/opt/ros/humble/share/vision_msgs/cmake)\n'}
+[0.755337] (41068_ignition_bringup) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.758180] (firewardenbot_vision) StdoutLine: {'line': b'-- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.758452] (firewardenbot_vision) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.788872] (firewardenbot_vision) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[0.797196] (firewardenbot_vision) StdoutLine: {'line': b'-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[0.800422] (-) TimerEvent: {}
+[0.823523] (41068_ignition_bringup) StderrLine: {'line': b'WARNING: Package name "41068_ignition_bringup" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.\n'}
+[0.834504] (firewardenbot_vision) StdoutLine: {'line': b'-- Found tf2: 0.25.13 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.856327] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.870939] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.871218] (41068_ignition_bringup) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[0.871381] (41068_ignition_bringup) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.873541] (firewardenbot_vision) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.13 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[0.884387] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.884620] (41068_ignition_bringup) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.886360] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.889923] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.891769] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.900586] (-) TimerEvent: {}
+[0.904786] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.905001] (41068_ignition_bringup) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.906622] (41068_ignition_bringup) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.916889] (41068_ignition_bringup) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.949934] (41068_ignition_bringup) StdoutLine: {'line': b'-- Generating done\n'}
+[0.952777] (41068_ignition_bringup) StdoutLine: {'line': b'-- Build files have been written to: /home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup\n'}
+[0.986885] (41068_ignition_bringup) CommandEnded: {'returncode': 0}
+[0.991017] (41068_ignition_bringup) JobProgress: {'identifier': '41068_ignition_bringup', 'progress': 'install'}
+[1.001429] (41068_ignition_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup'], 'cwd': '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('SSH_AGENT_PID', '3164'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/student/git/FIREWARDENBOT'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '3062'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3277'), ('BUNDLED_DEBUGPY_PATH', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('XRDP_PULSE_SOURCE_SOCKET', 'xrdp_chansrv_audio_in_socket_10'), ('XRDP_PULSE_SINK_SOCKET', 'xrdp_chansrv_audio_out_socket_10'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3765'), ('PULSE_SCRIPT', '/etc/xrdp/pulse/default.pa'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/student/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('JOURNAL_STREAM', '8:21347'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/labNVXMF8:@/tmp/.ICE-unix/3253,unix/labNVXMF8:/tmp/.ICE-unix/3253'), ('INVOCATION_ID', '5641f2211fda4e9da402bea0b730af28'), ('XDG_MENU_PREFIX', 'gnome-'), ('XRDP_SOCKET_PATH', '/run/xrdp/sockdir'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':10.0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-a5663b2c4f5c7f8e.txt'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/student/.config/Code/User/workspaceStorage/66ac5f533abb593a7bd8067f2098e24d/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1002/vscode-git-f44497d75e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'Unity'), ('UID', '1002'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('XRDP_SESSION', '1'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/41068_ignition_bringup'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('SGX_AESM_ADDR', '1'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.002642] (-) TimerEvent: {}
+[1.009765] (41068_ignition_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.010085] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config\n'}
+[1.010225] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/gazebo_bridge.yaml\n'}
+[1.014567] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/slam_params.yaml\n'}
+[1.017883] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/nav2_params.yaml\n'}
+[1.020885] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/robot_localization.yaml\n'}
+[1.024204] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/config/41068.rviz\n'}
+[1.027884] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/launch\n'}
+[1.028120] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_navigation.launch.py\n'}
+[1.028304] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/launch/41068_ignition.launch.py\n'}
+[1.028513] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models\n'}
+[1.028651] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane\n'}
+[1.028727] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/model.config\n'}
+[1.039285] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/model.sdf\n'}
+[1.043024] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials\n'}
+[1.043272] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials/textures\n'}
+[1.043353] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/grass_plane/materials/textures/empty_grass.png\n'}
+[1.101415] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane\n'}
+[1.101806] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/model.config\n'}
+[1.102727] (-) TimerEvent: {}
+[1.104872] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/model.sdf\n'}
+[1.108024] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials\n'}
+[1.108185] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures\n'}
+[1.108262] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/forest_overhead.png\n'}
+[1.153657] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/empty_grass.png\n'}
+[1.202912] (-) TimerEvent: {}
+[1.230095] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_plane/materials/textures/leaf_litter.png\n'}
+[1.273254] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall\n'}
+[1.273576] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/model.config\n'}
+[1.276108] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/model.sdf\n'}
+[1.278791] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials\n'}
+[1.279013] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures\n'}
+[1.279134] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures/forest_wall_transparent.png\n'}
+[1.303011] (-) TimerEvent: {}
+[1.318526] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures/forest_wall_transparent_small.png\n'}
+[1.325299] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/models/forest_wall/materials/textures/forest_wall.png\n'}
+[1.362569] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf\n'}
+[1.362851] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/common_properties.urdf.xacro\n'}
+[1.365768] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes\n'}
+[1.365939] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/top_plate.dae\n'}
+[1.368733] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/bumper.dae\n'}
+[1.381053] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/base_link.dae\n'}
+[1.395387] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/jpl04_arch_nosensor.stl\n'}
+[1.403193] (-) TimerEvent: {}
+[1.406682] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/top_chassis.dae\n'}
+[1.436180] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/meshes/wheel.dae\n'}
+[1.472792] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/camera_sensors.urdf.xacro\n'}
+[1.473064] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/wheel.urdf.xacro\n'}
+[1.475960] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/husky.urdf.xacro\n'}
+[1.476143] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/urdf/husky.gazebo.xacro\n'}
+[1.479019] (41068_ignition_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds\n'}
+[1.479222] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/simple_trees.sdf\n'}
+[1.481851] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/open_meadows.sdf\n'}
+[1.482099] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/mixed_terrain.sdf\n'}
+[1.482302] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/sparse_forest.sdf\n'}
+[1.482488] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/obstacle_course.sdf\n'}
+[1.482708] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/dense_forest.sdf\n'}
+[1.482929] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/worlds/large_demo.sdf\n'}
+[1.486047] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/package_run_dependencies/41068_ignition_bringup\n'}
+[1.486300] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/parent_prefix_path/41068_ignition_bringup\n'}
+[1.486568] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/ament_prefix_path.sh\n'}
+[1.486836] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/ament_prefix_path.dsv\n'}
+[1.487124] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/path.sh\n'}
+[1.487413] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/environment/path.dsv\n'}
+[1.487680] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.bash\n'}
+[1.487946] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.sh\n'}
+[1.488210] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.zsh\n'}
+[1.488461] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/local_setup.dsv\n'}
+[1.488696] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/package.dsv\n'}
+[1.488950] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/ament_index/resource_index/packages/41068_ignition_bringup\n'}
+[1.489206] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/cmake/41068_ignition_bringupConfig.cmake\n'}
+[1.489434] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/cmake/41068_ignition_bringupConfig-version.cmake\n'}
+[1.489700] (41068_ignition_bringup) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/41068_ignition_bringup/share/41068_ignition_bringup/package.xml\n'}
+[1.492599] (41068_ignition_bringup) CommandEnded: {'returncode': 0}
+[1.503295] (-) TimerEvent: {}
+[1.536202] (firewardenbot_vision) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.13 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.598303] (41068_ignition_bringup) JobEnded: {'identifier': '41068_ignition_bringup', 'rc': 0}
+[1.603412] (-) TimerEvent: {}
+[1.603668] (firewardenbot_vision) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.614048] (firewardenbot_vision) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.623121] (firewardenbot_vision) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.703559] (-) TimerEvent: {}
+[1.767057] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.768762] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.769124] (firewardenbot_vision) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.769320] (firewardenbot_vision) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.772451] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.774651] (firewardenbot_vision) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.776014] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.776180] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.776287] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.776383] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.776471] (firewardenbot_vision) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.776568] (firewardenbot_vision) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.793041] (firewardenbot_vision) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.803692] (-) TimerEvent: {}
+[1.876768] (firewardenbot_vision) StdoutLine: {'line': b'-- Generating done\n'}
+[1.885709] (firewardenbot_vision) StdoutLine: {'line': b'-- Build files have been written to: /home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision\n'}
+[1.903828] (-) TimerEvent: {}
+[1.932804] (firewardenbot_vision) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target fast_foliage_detector\x1b[0m\n'}
+[2.003980] (-) TimerEvent: {}
+[2.104480] (-) TimerEvent: {}
+[2.206264] (-) TimerEvent: {}
+[2.306776] (-) TimerEvent: {}
+[2.407264] (-) TimerEvent: {}
+[2.507643] (-) TimerEvent: {}
+[2.522569] (firewardenbot_vision) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/fast_foliage_detector.dir/src/fast_foliage_detector.cpp.o\x1b[0m\n'}
+[2.607787] (-) TimerEvent: {}
+[2.708209] (-) TimerEvent: {}
+[2.808606] (-) TimerEvent: {}
+[2.909024] (-) TimerEvent: {}
+[3.009448] (-) TimerEvent: {}
+[3.109854] (-) TimerEvent: {}
+[3.210277] (-) TimerEvent: {}
+[3.310700] (-) TimerEvent: {}
+[3.411180] (-) TimerEvent: {}
+[3.511571] (-) TimerEvent: {}
+[3.612014] (-) TimerEvent: {}
+[3.712481] (-) TimerEvent: {}
+[3.812974] (-) TimerEvent: {}
+[3.913435] (-) TimerEvent: {}
+[4.013825] (-) TimerEvent: {}
+[4.114285] (-) TimerEvent: {}
+[4.214796] (-) TimerEvent: {}
+[4.315344] (-) TimerEvent: {}
+[4.415787] (-) TimerEvent: {}
+[4.516214] (-) TimerEvent: {}
+[4.616709] (-) TimerEvent: {}
+[4.717252] (-) TimerEvent: {}
+[4.817795] (-) TimerEvent: {}
+[4.918310] (-) TimerEvent: {}
+[5.018791] (-) TimerEvent: {}
+[5.119358] (-) TimerEvent: {}
+[5.219992] (-) TimerEvent: {}
+[5.320502] (-) TimerEvent: {}
+[5.421072] (-) TimerEvent: {}
+[5.521533] (-) TimerEvent: {}
+[5.621989] (-) TimerEvent: {}
+[5.722483] (-) TimerEvent: {}
+[5.823002] (-) TimerEvent: {}
+[5.923500] (-) TimerEvent: {}
+[6.026003] (-) TimerEvent: {}
+[6.126458] (-) TimerEvent: {}
+[6.226981] (-) TimerEvent: {}
+[6.327559] (-) TimerEvent: {}
+[6.428076] (-) TimerEvent: {}
+[6.528523] (-) TimerEvent: {}
+[6.628965] (-) TimerEvent: {}
+[6.729386] (-) TimerEvent: {}
+[6.829886] (-) TimerEvent: {}
+[6.930392] (-) TimerEvent: {}
+[7.030922] (-) TimerEvent: {}
+[7.131450] (-) TimerEvent: {}
+[7.231996] (-) TimerEvent: {}
+[7.332532] (-) TimerEvent: {}
+[7.432990] (-) TimerEvent: {}
+[7.533548] (-) TimerEvent: {}
+[7.634126] (-) TimerEvent: {}
+[7.734656] (-) TimerEvent: {}
+[7.835193] (-) TimerEvent: {}
+[7.935636] (-) TimerEvent: {}
+[8.036093] (-) TimerEvent: {}
+[8.136674] (-) TimerEvent: {}
+[8.237225] (-) TimerEvent: {}
+[8.337780] (-) TimerEvent: {}
+[8.438330] (-) TimerEvent: {}
+[8.538805] (-) TimerEvent: {}
+[8.639344] (-) TimerEvent: {}
+[8.739935] (-) TimerEvent: {}
+[8.840479] (-) TimerEvent: {}
+[8.940970] (-) TimerEvent: {}
+[9.041515] (-) TimerEvent: {}
+[9.142022] (-) TimerEvent: {}
+[9.242596] (-) TimerEvent: {}
+[9.343082] (-) TimerEvent: {}
+[9.443599] (-) TimerEvent: {}
+[9.544099] (-) TimerEvent: {}
+[9.644551] (-) TimerEvent: {}
+[9.745057] (-) TimerEvent: {}
+[9.845578] (-) TimerEvent: {}
+[9.946100] (-) TimerEvent: {}
+[10.046620] (-) TimerEvent: {}
+[10.147189] (-) TimerEvent: {}
+[10.247718] (-) TimerEvent: {}
+[10.348273] (-) TimerEvent: {}
+[10.448792] (-) TimerEvent: {}
+[10.549339] (-) TimerEvent: {}
+[10.649814] (-) TimerEvent: {}
+[10.750321] (-) TimerEvent: {}
+[10.850844] (-) TimerEvent: {}
+[10.951449] (-) TimerEvent: {}
+[11.052010] (-) TimerEvent: {}
+[11.152499] (-) TimerEvent: {}
+[11.252991] (-) TimerEvent: {}
+[11.353473] (-) TimerEvent: {}
+[11.453995] (-) TimerEvent: {}
+[11.554455] (-) TimerEvent: {}
+[11.654991] (-) TimerEvent: {}
+[11.755499] (-) TimerEvent: {}
+[11.856099] (-) TimerEvent: {}
+[11.956580] (-) TimerEvent: {}
+[12.057085] (-) TimerEvent: {}
+[12.157513] (-) TimerEvent: {}
+[12.257935] (-) TimerEvent: {}
+[12.358383] (-) TimerEvent: {}
+[12.458819] (-) TimerEvent: {}
+[12.559299] (-) TimerEvent: {}
+[12.659747] (-) TimerEvent: {}
+[12.760157] (-) TimerEvent: {}
+[12.860547] (-) TimerEvent: {}
+[12.961037] (-) TimerEvent: {}
+[13.061479] (-) TimerEvent: {}
+[13.161893] (-) TimerEvent: {}
+[13.262331] (-) TimerEvent: {}
+[13.362801] (-) TimerEvent: {}
+[13.463222] (-) TimerEvent: {}
+[13.563659] (-) TimerEvent: {}
+[13.664100] (-) TimerEvent: {}
+[13.764608] (-) TimerEvent: {}
+[13.865081] (-) TimerEvent: {}
+[13.965597] (-) TimerEvent: {}
+[14.066214] (-) TimerEvent: {}
+[14.166653] (-) TimerEvent: {}
+[14.267082] (-) TimerEvent: {}
+[14.367511] (-) TimerEvent: {}
+[14.468000] (-) TimerEvent: {}
+[14.568539] (-) TimerEvent: {}
+[14.669040] (-) TimerEvent: {}
+[14.769480] (-) TimerEvent: {}
+[14.869979] (-) TimerEvent: {}
+[14.970396] (-) TimerEvent: {}
+[15.070880] (-) TimerEvent: {}
+[15.171322] (-) TimerEvent: {}
+[15.271726] (-) TimerEvent: {}
+[15.372157] (-) TimerEvent: {}
+[15.472563] (-) TimerEvent: {}
+[15.573056] (-) TimerEvent: {}
+[15.673525] (-) TimerEvent: {}
+[15.774013] (-) TimerEvent: {}
+[15.874585] (-) TimerEvent: {}
+[15.975061] (-) TimerEvent: {}
+[16.075550] (-) TimerEvent: {}
+[16.176093] (-) TimerEvent: {}
+[16.276518] (-) TimerEvent: {}
+[16.376995] (-) TimerEvent: {}
+[16.477483] (-) TimerEvent: {}
+[16.578001] (-) TimerEvent: {}
+[16.678499] (-) TimerEvent: {}
+[16.779003] (-) TimerEvent: {}
+[16.879507] (-) TimerEvent: {}
+[16.979973] (-) TimerEvent: {}
+[17.080510] (-) TimerEvent: {}
+[17.184021] (-) TimerEvent: {}
+[17.284498] (-) TimerEvent: {}
+[17.385000] (-) TimerEvent: {}
+[17.485512] (-) TimerEvent: {}
+[17.586012] (-) TimerEvent: {}
+[17.686524] (-) TimerEvent: {}
+[17.786985] (-) TimerEvent: {}
+[17.887438] (-) TimerEvent: {}
+[17.987976] (-) TimerEvent: {}
+[18.088447] (-) TimerEvent: {}
+[18.188994] (-) TimerEvent: {}
+[18.289406] (-) TimerEvent: {}
+[18.389828] (-) TimerEvent: {}
+[18.490271] (-) TimerEvent: {}
+[18.590768] (-) TimerEvent: {}
+[18.691312] (-) TimerEvent: {}
+[18.791764] (-) TimerEvent: {}
+[18.892317] (-) TimerEvent: {}
+[18.992847] (-) TimerEvent: {}
+[19.093424] (-) TimerEvent: {}
+[19.193872] (-) TimerEvent: {}
+[19.215167] (firewardenbot_vision) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable fast_foliage_detector\x1b[0m\n'}
+[19.294027] (-) TimerEvent: {}
+[19.394605] (-) TimerEvent: {}
+[19.495119] (-) TimerEvent: {}
+[19.595680] (-) TimerEvent: {}
+[19.696290] (-) TimerEvent: {}
+[19.796862] (-) TimerEvent: {}
+[19.897394] (-) TimerEvent: {}
+[19.997979] (-) TimerEvent: {}
+[20.098466] (-) TimerEvent: {}
+[20.199076] (-) TimerEvent: {}
+[20.299655] (-) TimerEvent: {}
+[20.400238] (-) TimerEvent: {}
+[20.500808] (-) TimerEvent: {}
+[20.601355] (-) TimerEvent: {}
+[20.701880] (-) TimerEvent: {}
+[20.802450] (-) TimerEvent: {}
+[20.902970] (-) TimerEvent: {}
+[21.003429] (-) TimerEvent: {}
+[21.104021] (-) TimerEvent: {}
+[21.204517] (-) TimerEvent: {}
+[21.305067] (-) TimerEvent: {}
+[21.405626] (-) TimerEvent: {}
+[21.506154] (-) TimerEvent: {}
+[21.606675] (-) TimerEvent: {}
+[21.707228] (-) TimerEvent: {}
+[21.807744] (-) TimerEvent: {}
+[21.908271] (-) TimerEvent: {}
+[22.008803] (-) TimerEvent: {}
+[22.109342] (-) TimerEvent: {}
+[22.209932] (-) TimerEvent: {}
+[22.310440] (-) TimerEvent: {}
+[22.410961] (-) TimerEvent: {}
+[22.511458] (-) TimerEvent: {}
+[22.612017] (-) TimerEvent: {}
+[22.712515] (-) TimerEvent: {}
+[22.812979] (-) TimerEvent: {}
+[22.913465] (-) TimerEvent: {}
+[23.013934] (-) TimerEvent: {}
+[23.114455] (-) TimerEvent: {}
+[23.214954] (-) TimerEvent: {}
+[23.315455] (-) TimerEvent: {}
+[23.415932] (-) TimerEvent: {}
+[23.516385] (-) TimerEvent: {}
+[23.616833] (-) TimerEvent: {}
+[23.717332] (-) TimerEvent: {}
+[23.802427] (firewardenbot_vision) StdoutLine: {'line': b'[100%] Built target fast_foliage_detector\n'}
+[23.816356] (firewardenbot_vision) CommandEnded: {'returncode': 0}
+[23.817414] (-) TimerEvent: {}
+[23.821972] (firewardenbot_vision) JobProgress: {'identifier': 'firewardenbot_vision', 'progress': 'install'}
+[23.823037] (firewardenbot_vision) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision'], 'cwd': '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('SSH_AGENT_PID', '3164'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/student/git/FIREWARDENBOT'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '3062'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3277'), ('BUNDLED_DEBUGPY_PATH', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('XRDP_PULSE_SOURCE_SOCKET', 'xrdp_chansrv_audio_in_socket_10'), ('XRDP_PULSE_SINK_SOCKET', 'xrdp_chansrv_audio_out_socket_10'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3765'), ('PULSE_SCRIPT', '/etc/xrdp/pulse/default.pa'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/student/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('JOURNAL_STREAM', '8:21347'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts:/home/student/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/labNVXMF8:@/tmp/.ICE-unix/3253,unix/labNVXMF8:/tmp/.ICE-unix/3253'), ('INVOCATION_ID', '5641f2211fda4e9da402bea0b730af28'), ('XDG_MENU_PREFIX', 'gnome-'), ('XRDP_SOCKET_PATH', '/run/xrdp/sockdir'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':10.0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/student/.vscode/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-a5663b2c4f5c7f8e.txt'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/student/.config/Code/User/workspaceStorage/66ac5f533abb593a7bd8067f2098e24d/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1002/vscode-git-f44497d75e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'Unity'), ('UID', '1002'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('XRDP_SESSION', '1'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('SGX_AESM_ADDR', '1'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[23.835017] (firewardenbot_vision) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.835712] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/foliage_hazard_node.py\n'}
+[23.835884] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/object_detection_node.py\n'}
+[23.836050] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/image_processing_node.py\n'}
+[23.836170] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/stereo_vision_node.py\n'}
+[23.836290] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/vision_aggregator.py\n'}
+[23.857252] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/fast_foliage_detector\n'}
+[23.865045] (firewardenbot_vision) StdoutLine: {'line': b'-- Set runtime path of "/home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/fast_foliage_detector" to ""\n'}
+[23.865390] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/launch\n'}
+[23.865538] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/launch/firewardenbot_with_vision.launch.py\n'}
+[23.865630] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/launch/vision_system.launch.py\n'}
+[23.865770] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/config\n'}
+[23.865845] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/config/vision_config.yaml\n'}
+[23.866000] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/ament_index/resource_index/package_run_dependencies/firewardenbot_vision\n'}
+[23.866079] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/ament_index/resource_index/parent_prefix_path/firewardenbot_vision\n'}
+[23.866195] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/ament_prefix_path.sh\n'}
+[23.866265] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/ament_prefix_path.dsv\n'}
+[23.866337] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/path.sh\n'}
+[23.866525] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/path.dsv\n'}
+[23.866597] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.bash\n'}
+[23.866669] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.sh\n'}
+[23.866766] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.zsh\n'}
+[23.866843] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.dsv\n'}
+[23.866924] (firewardenbot_vision) StdoutLine: {'line': b'-- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/package.dsv\n'}
+[23.867123] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/ament_index/resource_index/packages/firewardenbot_vision\n'}
+[23.867211] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/cmake/firewardenbot_visionConfig.cmake\n'}
+[23.867324] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/cmake/firewardenbot_visionConfig-version.cmake\n'}
+[23.867394] (firewardenbot_vision) StdoutLine: {'line': b'-- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/package.xml\n'}
+[23.869394] (firewardenbot_vision) CommandEnded: {'returncode': 0}
+[23.884829] (firewardenbot_vision) JobEnded: {'identifier': 'firewardenbot_vision', 'rc': 0}
+[23.885753] (-) EventReactorShutdown: {}

@@ -1,0 +1,71 @@
+[0.048s] Invoking command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision -- -j8 -l8
+[0.218s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.394s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.441s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.445s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.453s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.463s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.481s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.516s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.517s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.634s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.704s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[0.704s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.734s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.743s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[0.780s] -- Found tf2: 0.25.13 (/opt/ros/humble/share/tf2/cmake)
+[0.819s] -- Found tf2_ros: 0.25.13 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.482s] -- Found tf2_geometry_msgs: 0.25.13 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.549s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.560s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.569s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.713s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.714s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.715s] -- Configured cppcheck include dirs: 
+[1.715s] -- Configured cppcheck exclude dirs and/or files: 
+[1.720s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.721s] -- Configured cpplint exclude dirs and/or files: 
+[1.721s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.722s] -- Added test 'lint_cmake' to check CMake code style
+[1.722s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.722s] -- Added test 'uncrustify' to check C / C++ code style
+[1.722s] -- Configured uncrustify additional arguments: 
+[1.722s] -- Added test 'xmllint' to check XML markup files
+[1.739s] -- Configuring done
+[1.822s] -- Generating done
+[1.831s] -- Build files have been written to: /home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision
+[1.879s] [35m[1mConsolidate compiler generated dependencies of target fast_foliage_detector[0m
+[2.468s] [ 50%] [32mBuilding CXX object CMakeFiles/fast_foliage_detector.dir/src/fast_foliage_detector.cpp.o[0m
+[19.161s] [100%] [32m[1mLinking CXX executable fast_foliage_detector[0m
+[23.748s] [100%] Built target fast_foliage_detector
+[23.762s] Invoked command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision -- -j8 -l8
+[23.769s] Invoking command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision
+[23.781s] -- Install configuration: ""
+[23.781s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/foliage_hazard_node.py
+[23.781s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/object_detection_node.py
+[23.781s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/image_processing_node.py
+[23.782s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/stereo_vision_node.py
+[23.782s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/vision_aggregator.py
+[23.803s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/fast_foliage_detector
+[23.811s] -- Set runtime path of "/home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/lib/firewardenbot_vision/fast_foliage_detector" to ""
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/launch
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/launch/firewardenbot_with_vision.launch.py
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/launch/vision_system.launch.py
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/config
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/config/vision_config.yaml
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/ament_index/resource_index/package_run_dependencies/firewardenbot_vision
+[23.811s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/ament_index/resource_index/parent_prefix_path/firewardenbot_vision
+[23.812s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/ament_prefix_path.sh
+[23.812s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/ament_prefix_path.dsv
+[23.812s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/path.sh
+[23.812s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/environment/path.dsv
+[23.812s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.bash
+[23.812s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.sh
+[23.812s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.zsh
+[23.812s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/local_setup.dsv
+[23.812s] -- Installing: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/package.dsv
+[23.812s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/ament_index/resource_index/packages/firewardenbot_vision
+[23.813s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/cmake/firewardenbot_visionConfig.cmake
+[23.813s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/cmake/firewardenbot_visionConfig-version.cmake
+[23.813s] -- Up-to-date: /home/student/git/FIREWARDENBOT/World/41068_ws/install/firewardenbot_vision/share/firewardenbot_vision/package.xml
+[23.816s] Invoked command in '/home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/student/git/FIREWARDENBOT/World/41068_ws/build/firewardenbot_vision
