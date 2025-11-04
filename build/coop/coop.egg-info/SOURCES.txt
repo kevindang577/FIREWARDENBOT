@@ -11,5 +11,12 @@ coop/__init__.py
 coop/coverage_manager.py
 coop/drone_agent.py
 coop/task_allocator.py
+coop.egg-info/PKG-INFO
+coop.egg-info/SOURCES.txt
+coop.egg-info/dependency_links.txt
+coop.egg-info/entry_points.txt
+coop.egg-info/requires.txt
+coop.egg-info/top_level.txt
+coop.egg-info/zip-safe
 launch/coop_demo.launch.py
 resource/coop

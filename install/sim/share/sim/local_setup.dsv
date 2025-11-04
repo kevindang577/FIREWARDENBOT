@@ -1,2 +1,1 @@
-source;share/sim/environment/ament_prefix_path.sh
-source;share/sim/environment/path.sh
+/home/student/git/FIREWARDENBOT/build/sim/ament_cmake_environment_hooks/local_setup.dsv

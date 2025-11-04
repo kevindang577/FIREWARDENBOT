@@ -1,49 +1,94 @@
 # Bridge between Ignition/Gazebo topics and ROS 2 for TWO drones
-# This is the same pattern as your single-drone gazebo_bridge.yaml, just duplicated
-# for /model/drone1/... and /model/drone2/...
+# Same as the single-drone bridge, just duplicated for /model/drone1/... and /model/drone2/...
 
-# --------------------
+# ============================================================
 # drone1
-# --------------------
+# ============================================================
+
+# velocity command (ROS <-> Gazebo)
 - topic_name: "/model/drone1/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "ignition.msgs.Twist"
   direction: BIDIRECTIONAL
 
+# odom from Gazebo -> ROS
 - topic_name: "/model/drone1/odometry"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "ignition.msgs.Odometry"
   direction: GZ_TO_ROS
 
+# imu from Gazebo -> ROS
 - topic_name: "/model/drone1/imu"
   ros_type_name: "sensor_msgs/msg/Imu"
   gz_type_name: "ignition.msgs.IMU"
   direction: GZ_TO_ROS
 
+# lidar from Gazebo -> ROS
 - topic_name: "/model/drone1/scan"
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "ignition.msgs.LaserScan"
   direction: GZ_TO_ROS
 
-# --------------------
+# camera RGB
+- topic_name: "/model/drone1/camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+
+# camera depth
+- topic_name: "/model/drone1/camera/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+
+# camera point cloud
+- topic_name: "/model/drone1/camera/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "ignition.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+# ============================================================
 # drone2
-# --------------------
+# ============================================================
+
+# velocity command (ROS <-> Gazebo)
 - topic_name: "/model/drone2/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "ignition.msgs.Twist"
   direction: BIDIRECTIONAL
 
+# odom from Gazebo -> ROS
 - topic_name: "/model/drone2/odometry"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "ignition.msgs.Odometry"
   direction: GZ_TO_ROS
 
+# imu from Gazebo -> ROS
 - topic_name: "/model/drone2/imu"
   ros_type_name: "sensor_msgs/msg/Imu"
   gz_type_name: "ignition.msgs.IMU"
   direction: GZ_TO_ROS
 
+# lidar from Gazebo -> ROS
 - topic_name: "/model/drone2/scan"
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "ignition.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+# camera RGB
+- topic_name: "/model/drone2/camera/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+
+# camera depth
+- topic_name: "/model/drone2/camera/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+
+# camera point cloud
+- topic_name: "/model/drone2/camera/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "ignition.msgs.PointCloudPacked"
   direction: GZ_TO_ROS

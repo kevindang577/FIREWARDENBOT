@@ -3,9 +3,8 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.actions import ExecuteProcess
-from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument, ExecuteProcess
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 
 
@@ -26,31 +25,44 @@ def generate_launch_description():
     drone1_name_arg = DeclareLaunchArgument(
         'drone1_name',
         default_value='drone1',
-        description='Name for first drone'
+        description='Name for the first drone'
     )
 
     drone2_name_arg = DeclareLaunchArgument(
         'drone2_name',
         default_value='drone2',
-        description='Name for second drone'
+        description='Name for the second drone'
     )
 
     # package paths
     sim_share = get_package_share_directory('sim')
     description_share = get_package_share_directory('description')
 
-    world_path = os.path.join(sim_share, 'worlds', LaunchConfiguration('world'))
-    robot_description_path = os.path.join(description_share, 'urdf', 'parrot.urdf.xacro')
+    # ❗️THIS was the problem line before.
+    # You can’t do os.path.join(..., LaunchConfiguration('world'))
+    # Use PathJoinSubstitution so launch can resolve it.
+    world_path = PathJoinSubstitution([
+        sim_share,
+        'worlds',
+        LaunchConfiguration('world')
+    ])
+
+    robot_description_path = os.path.join(
+        description_share,
+        'urdf',
+        'parrot.urdf.xacro'
+    )
 
     # 1) start Ignition/Gazebo once
     gazebo = ExecuteProcess(
-        cmd=['ign', 'gazebo', '-r', world_path],
+        cmd=[
+            'ign', 'gazebo', '-r',
+            world_path
+        ],
         output='screen'
     )
 
     # 2) robot_state_publisher for each drone (namespaced)
-    # Note: we’re doing the same thing your 1-drone launch did: passing the xacro path directly.
-    # If later you want to expand the xacro first, we can switch to a xacro command.
     drone1_rsp = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -76,6 +88,7 @@ def generate_launch_description():
     )
 
     # 3) spawn both drones into Ignition, different poses
+    # this part in your original file was already fine
     drone1_spawn = Node(
         package='ros_ign_gazebo',
         executable='create',

@@ -1,3 +1,0 @@
-[console_scripts]
-coverage_manager = coop.coverage_manager:main
-
