@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>coop</name>
+  <version>0.0.1</version>
+  <description>Cooperative multi-drone coordination for FIREWARDENBOT (coverage, task allocation).</description>
+
+  <maintainer email="kevin@example.com">Kevin Dang</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- We'll write this in Python -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- core ROS 2 Python client -->
+  <exec_depend>rclpy</exec_depend>
+
+  <!-- to run our own launch (coop_demo.launch.py) -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- we will probably talk to Nav2 actions later -->
+  <exec_depend>nav2_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

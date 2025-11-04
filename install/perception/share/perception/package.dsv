@@ -1,0 +1,3 @@
+source;share/perception/hook/pythonpath.ps1
+source;share/perception/hook/pythonpath.dsv
+source;share/perception/hook/pythonpath.sh
