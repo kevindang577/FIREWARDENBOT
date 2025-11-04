@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/build/description/ament_cmake_environment_hooks/local_setup.bash

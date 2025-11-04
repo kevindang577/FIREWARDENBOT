@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/src/bringup/launch/sim_two_drones_with_coop.launch.py

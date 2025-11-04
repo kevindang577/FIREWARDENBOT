@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/src/bringup/launch/bridge_two_drones.launch.py

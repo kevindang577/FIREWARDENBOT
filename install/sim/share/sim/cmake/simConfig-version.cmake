@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/build/sim/ament_cmake_core/simConfig-version.cmake

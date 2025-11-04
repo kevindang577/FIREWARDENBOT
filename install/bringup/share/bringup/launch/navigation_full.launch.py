@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/src/bringup/launch/navigation_full.launch.py

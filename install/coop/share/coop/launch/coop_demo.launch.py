@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/build/coop/launch/coop_demo.launch.py
