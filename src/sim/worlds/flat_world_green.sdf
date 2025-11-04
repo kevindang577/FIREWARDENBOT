@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="flat_world_green">
+    <!-- normal gravity -->
+    <gravity>0 0 -9.8</gravity>
+
+    <!-- simple directional light so things aren’t dark -->
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>-0.5 0.5 -1</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+    <!-- inline floor with real collision -->
+    <model name="floor">
+      <static>true</static>
+      <link name="link">
+        <!-- actual collision plane -->
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+
+        <!-- visual: use the same green texture path you had -->
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <pbr>
+              <metal>
+                <!-- this is from your forest plane model -->
+                <albedo_map>model://forest_plane/materials/textures/forest_overhead.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

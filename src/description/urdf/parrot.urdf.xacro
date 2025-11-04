@@ -1,19 +1,21 @@
 <?xml version="1.0" ?>
 <robot name="parrot" xmlns:xacro="http://ros.org/wiki/xacro">
-  <!-- give the whole robot a model_name (used by parrot.gazebo.xacro) -->
+  <!-- model name that Gazebo plugins will use for topics: /model/<model_name>/... -->
   <xacro:arg name="model_name" default="drone1"/>
 
-  <!-- include the shared props and the gazebo extras from THIS package -->
+  <!-- include local xacros from this package -->
   <xacro:include filename="$(find description)/urdf/common_properties.urdf.xacro"/>
   <xacro:include filename="$(find description)/urdf/parrot.gazebo.xacro"/>
 
+  <!-- camera offsets -->
   <xacro:property name="r200_cam_rgb_px" value="0.005"/>
   <xacro:property name="r200_cam_rgb_py" value="0.018"/>
   <xacro:property name="r200_cam_rgb_pz" value="0.013"/>
   <xacro:property name="r200_cam_depth_offset" value="0.01"/>
 
-  <!-- Main link -->
+  <!-- ================= base_link ================= -->
   <link name="base_link">
+    <!-- inertia from original file -->
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0.503"/>
@@ -22,30 +24,42 @@
                izz="3.328e-3" />
     </inertial>
 
-    <!-- all meshes now come from description/meshes/... -->
+    <!-- SIMPLE COLLISION so it doesn't fall through the world -->
+    <collision name="collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.4 0.4 0.15"/>
+      </geometry>
+    </collision>
+
+    <!-- visuals (using your meshes copied into description/meshes) -->
     <visual name="hull">
       <geometry>
         <mesh filename="file://$(find description)/meshes/hull.dae"/>
       </geometry>
     </visual>
+
     <visual name="propeller_rr">
       <origin xyz="-0.09035 -0.11423 -0.00501" rpy="0 0 0"/>
       <geometry>
         <mesh filename="file://$(find description)/meshes/propeller_rr.dae"/>
       </geometry>
     </visual>
+
     <visual name="propeller_rl">
       <origin xyz="0.09035 0.11452 -0.00501" rpy="0 0 0"/>
       <geometry>
         <mesh filename="file://$(find description)/meshes/propeller_rl.dae"/>
       </geometry>
     </visual>
+
     <visual name="propeller_fr">
       <origin xyz="0.08456 -0.11435 -0.00501" rpy="0 0 0"/>
       <geometry>
         <mesh filename="file://$(find description)/meshes/propeller_fr.dae"/>
       </geometry>
     </visual>
+
     <visual name="propeller_fl">
       <origin xyz="0.08456 0.11463 -0.00501" rpy="0 0 0"/>
       <geometry>
@@ -54,6 +68,7 @@
     </visual>
   </link>
 
+  <!-- ================ IMU ================= -->
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu_link"/>
@@ -61,11 +76,13 @@
   </joint>
   <link name="imu_link"/>
 
+  <!-- ================ LIDAR ================= -->
   <joint name="scan_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_scan"/>
     <origin xyz="0 0 0.2" rpy="0 0 0"/>
   </joint>
+
   <link name="base_scan">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -83,11 +100,13 @@
     </inertial>
   </link>
 
+  <!-- ================ CAMERA LINK ================= -->
   <joint name="camera_joint" type="fixed">
     <origin xyz="0.25 0.0 0.25" rpy="0 0.785398 0"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>
+
   <link name="camera_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -96,15 +115,9 @@
       </geometry>
       <material name="dark"/>
     </visual>
-    <visual>
-      <origin xyz="0.015 0 0" rpy="0 1.57 0"/>
-      <geometry>
-        <cylinder length="0.03" radius="0.02"/>
-      </geometry>
-      <material name="dark"/>
-    </visual>
   </link>
 
+  <!-- ================ RGB CAMERA FRAMES ================= -->
   <joint name="camera_rgb_joint" type="fixed">
     <origin xyz="${r200_cam_rgb_px} ${r200_cam_rgb_py} ${r200_cam_rgb_pz}" rpy="0 0 0"/>
     <parent link="camera_link"/>
@@ -119,6 +132,7 @@
   </joint>
   <link name="camera_rgb_optical_frame"/>
 
+  <!-- ================ DEPTH CAMERA FRAMES ================= -->
   <joint name="camera_depth_joint" type="fixed">
     <origin xyz="${r200_cam_rgb_px} ${r200_cam_rgb_py + r200_cam_depth_offset} ${r200_cam_rgb_pz}" rpy="0 0 0"/>
     <parent link="camera_link"/>
