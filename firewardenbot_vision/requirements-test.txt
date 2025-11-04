@@ -1,9 +1,0 @@
-ament_cmake
-rclpy
-sensor_msgs
-cv_bridge
-geometry_msgs
-std_msgs
-vision_msgs
-pytest
-pytest-ros
