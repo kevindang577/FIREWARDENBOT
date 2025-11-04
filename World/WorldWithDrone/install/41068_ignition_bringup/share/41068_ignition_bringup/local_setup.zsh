@@ -1,1 +1,0 @@
-/home/student/git/FIREWARDENBOT/World/WorldWithDrone/build/41068_ignition_bringup/ament_cmake_environment_hooks/local_setup.zsh
