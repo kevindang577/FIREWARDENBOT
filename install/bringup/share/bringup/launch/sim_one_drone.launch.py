@@ -9,7 +9,7 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    # args
+    # --- args ---
     world_arg = DeclareLaunchArgument(
         'world',
         default_value='simple_trees.sdf',
@@ -28,12 +28,12 @@ def generate_launch_description():
         description='Name / namespace for the drone model'
     )
 
-    # paths
+    # --- paths ---
     sim_share = get_package_share_directory('sim')
     description_share = get_package_share_directory('description')
     bringup_share = get_package_share_directory('bringup')
 
-    # build the world path with launch substitutions
+    # build world path properly with substitutions
     world_path = PathJoinSubstitution([
         sim_share,
         'worlds',
@@ -46,14 +46,14 @@ def generate_launch_description():
         'parrot.urdf.xacro'
     )
 
-    # start Ignition/Gazebo
+    # 1) start Ignition/Gazebo
     gazebo = ExecuteProcess(
         cmd=['ign', 'gazebo', '-r', world_path],
-        # if you have gz instead: cmd=['gz', 'sim', '-r', world_path],
+        # if you only have gz: cmd=['gz', 'sim', '-r', world_path],
         output='screen'
     )
 
-    # robot_state_publisher
+    # 2) robot_state_publisher
     rsp = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -65,7 +65,7 @@ def generate_launch_description():
         arguments=[robot_description_path]
     )
 
-    # spawn the drone into Ignition
+    # 3) spawn the drone
     spawn_drone = Node(
         package='ros_ign_gazebo',  # change to ros_gz_sim if that's your install
         executable='create',
@@ -77,7 +77,7 @@ def generate_launch_description():
         ]
     )
 
-    # RViz (optional)
+    # 4) RViz
     rviz = Node(
         package='rviz2',
         executable='rviz2',

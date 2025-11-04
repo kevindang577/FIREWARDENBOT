@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>description</name>
+  <version>0.0.1</version>
+  <description>Drone description (URDF/Xacro/meshes) for FIREWARDENBOT.</description>
+
+  <maintainer email="kevin@example.com">Kevin Dang</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- we just need xacro and robot_state_publisher to consume these -->
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
