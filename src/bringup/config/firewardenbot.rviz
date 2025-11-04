@@ -5,8 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /LaserScan1
       Splitter Ratio: 0.5
-    Tree Height: 112
+    Tree Height: 185
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -46,40 +47,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        base_link:
-          Value: true
-        base_scan:
-          Value: true
-        camera_depth_frame:
-          Value: true
-        camera_depth_optical_frame:
-          Value: true
-        camera_link:
-          Value: true
-        camera_rgb_frame:
-          Value: true
-        camera_rgb_optical_frame:
-          Value: true
-        imu_link:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          base_scan:
-            {}
-          camera_link:
-            camera_depth_frame:
-              camera_depth_optical_frame:
-                {}
-            camera_rgb_frame:
-              camera_rgb_optical_frame:
-                {}
-          imu_link:
-            {}
+        {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -100,41 +74,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        base_scan:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        camera_depth_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        camera_depth_optical_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        camera_rgb_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        camera_rgb_optical_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Mass Properties:
         Inertia: false
         Mass: false
@@ -238,11 +177,45 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /visualization_marker
       Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: ""
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: ""
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /model/drone1/scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Fixed Frame: base_link
-    Frame Rate: 30
+    Frame Rate: 31
   Name: root
   Tools:
     - Class: rviz_default_plugins/Interact
@@ -302,16 +275,36 @@ Visualization Manager:
       Target Frame: world
       Value: Orbit (rviz_default_plugins)
       Yaw: 1.9049999713897705
-    Saved: ~
+    Saved:
+      - Class: rviz_default_plugins/Orbit
+        Distance: 3.5302722454071045
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 0
+          Y: 0
+          Z: 0
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.5000000596046448
+        Target Frame: world
+        Value: Orbit (rviz_default_plugins)
+        Yaw: 1.9049999713897705
 Window Geometry:
   Displays:
     collapsed: false
   Drone1 Camera:
     collapsed: false
-  Height: 900
+  Height: 1138
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000001cb0000032afc0200000005fb0000001a00440072006f006e00650031002000430061006d006500720061010000003d000000900000002800fffffffb000000100044006900730070006c00610079007301000000d3000000f3000000c900fffffffb0000001200530065006c0065006300740069006f006e01000001cc000000750000005c00fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000247000000760000005c00fffffffb0000000a0056006900650077007301000002c3000000a4000000a400ffffff0000046f0000032a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000001cb00000418fc0200000005fb0000001a00440072006f006e00650031002000430061006d006500720061010000003d000000bc0000002800fffffffb000000100044006900730070006c00610079007301000000ff0000013c000000c900fffffffb0000001200530065006c0065006300740069006f006e0100000241000000990000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007301000002e00000009a0000005c00fffffffb0000000a005600690065007700730100000380000000d5000000a400ffffff0000046f0000041800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Tool Properties:
