@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 import os
 from glob import glob
 
@@ -7,14 +7,14 @@ package_name = 'coop'
 setup(
     name=package_name,
     version='0.0.1',
-    packages=find_packages(include=[package_name]),
+    packages=[package_name],  # this expects src/coop/coop/__init__.py
     data_files=[
-        # make ROS 2 aware of this package
+        # so ROS 2 can discover the package
         ('share/ament_index/resource_index/packages',
          ['resource/' + package_name]),
         # install package.xml
         ('share/' + package_name, ['package.xml']),
-        # install launch files
+        # install launch files if you have any
         (os.path.join('share', package_name, 'launch'),
          glob('launch/*.launch.py')),
     ],
@@ -24,10 +24,9 @@ setup(
     maintainer_email='kevin@example.com',
     description='Cooperative multi-drone coordination for FIREWARDENBOT.',
     license='Apache-2.0',
-    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # this is our actual node
+            # this is what should create install/coop/lib/coop/coverage_manager
             'coverage_manager = coop.coverage_manager:main',
         ],
     },
