@@ -7,6 +7,7 @@ from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
+
 def generate_launch_description():
     bringup_share = get_package_share_directory('bringup')
 
@@ -19,7 +20,7 @@ def generate_launch_description():
         default_value='true'
     )
 
-    # SLAM toolbox
+    # SLAM toolbox (mapping mode)
     slam_toolbox_node = Node(
         package='slam_toolbox',
         executable='sync_slam_toolbox_node',
@@ -29,7 +30,7 @@ def generate_launch_description():
                     {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
 
-    # robot_localization
+    # robot_localization EKF
     ekf_node = Node(
         package='robot_localization',
         executable='ekf_node',
@@ -39,21 +40,103 @@ def generate_launch_description():
                     {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
 
-    # Nav2 (this assumes nav2_params.yaml is from the zip)
-    nav2_bt = Node(
-        package='nav2_bt_navigator',
-        executable='bt_navigator',
+    # ===== Nav2 core servers =====
+    # Planner
+    planner_server = Node(
+        package='nav2_planner',
+        executable='planner_server',
+        name='planner_server',
+        output='screen',
+        parameters=[nav2_params,
+                    {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+    # Controller (local planner)
+    controller_server = Node(
+        package='nav2_controller',
+        executable='controller_server',
+        name='controller_server',
+        output='screen',
+        parameters=[nav2_params,
+                    {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+    # Behavior server (spin/backup/etc.)
+    behavior_server = Node(
+        package='nav2_behaviors',
+        executable='behavior_server',
+        name='behavior_server',
+        output='screen',
+        parameters=[nav2_params,
+                    {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+    # Smoother
+    smoother_server = Node(
+        package='nav2_smoother',
+        executable='smoother_server',
+        name='smoother_server',
+        output='screen',
+        parameters=[nav2_params,
+                    {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+    # Waypoint follower (optional, but you have params)
+    waypoint_follower = Node(
+        package='nav2_waypoint_follower',
+        executable='waypoint_follower',
+        name='waypoint_follower',
+        output='screen',
+        parameters=[nav2_params,
+                    {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+    # Velocity smoother (optional, params exist)
+    velocity_smoother = Node(
+        package='nav2_velocity_smoother',
+        executable='velocity_smoother',
+        name='velocity_smoother',
         output='screen',
         parameters=[nav2_params,
                     {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
 
-    # Typically you'd also start controller_server, planner_server, amcl or map_server etc.
-    # If the original zip launch did that, mirror it here, but with bringup/... paths.
+    # BT Navigator
+    bt_navigator = Node(
+        package='nav2_bt_navigator',
+        executable='bt_navigator',
+        name='bt_navigator',
+        output='screen',
+        parameters=[nav2_params,
+                    {'use_sim_time': LaunchConfiguration('use_sim_time')}]
+    )
+
+    # Lifecycle manager to bring nodes to ACTIVE
+    lifecycle_manager = Node(
+        package='nav2_lifecycle_manager',
+        executable='lifecycle_manager',
+        name='lifecycle_manager_navigation',
+        output='screen',
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'autostart': True,
+            'node_names': [
+                'controller_server',
+                'planner_server',
+                'behavior_server',
+                'smoother_server',
+                'bt_navigator',
+                'waypoint_follower',
+                'velocity_smoother',
+            ]
+        }]
+    )
 
     return LaunchDescription([
         use_sim_time_arg,
         slam_toolbox_node,
         ekf_node,
-        nav2_bt,
+        planner_server,
+        controller_server,
+        behavior_server,
+        smoother_server,
+        waypoint_follower,
+        velocity_smoother,
+        bt_navigator,
+        lifecycle_manager,
     ])
