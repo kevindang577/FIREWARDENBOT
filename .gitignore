@@ -5,3 +5,5 @@ log/
 install/
 .vscode/
 log/
+log/
+**/log/
