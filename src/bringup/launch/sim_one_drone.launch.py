@@ -7,8 +7,9 @@ from launch.actions import (
     DeclareLaunchArgument,
     ExecuteProcess,
     SetEnvironmentVariable,
-    TimerAction,
+    RegisterEventHandler,
 )
+from launch.event_handlers import OnProcessExit
 from launch.substitutions import (
     LaunchConfiguration,
     Command,
@@ -63,7 +64,7 @@ def generate_launch_description():
     bringup_share = get_package_share_directory('bringup')
     description_share = get_package_share_directory('description')
 
-    # Ensure this xacro exists (see earlier step to align filename/location)
+    # Ensure this xacro exists (align filename/location in your repo)
     parrot_xacro = os.path.join(description_share, 'urdf', 'parrot.urdf.xacro')
     tmp_urdf = '/tmp/parrot.urdf'
     rviz_config = os.path.join(bringup_share, 'config', 'firewardenbot.rviz')
@@ -71,7 +72,7 @@ def generate_launch_description():
     # ----- make gazebo find our models/worlds -----
     ign_paths = os.path.join(sim_share, 'models') + ':' + os.path.join(sim_share, 'worlds')
     set_ign_resources = SetEnvironmentVariable('IGN_GAZEBO_RESOURCE_PATH', ign_paths)
-    set_gz_resources = SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', ign_paths)
+    set_gz_resources  = SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', ign_paths)
 
     # ----- start gazebo (world path under sim/worlds) -----
     gazebo_proc = ExecuteProcess(
@@ -82,7 +83,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # ----- generate URDF from xacro (VALID Python expression for the arg) -----
+    # ----- generate URDF from xacro -----
     gen_urdf = ExecuteProcess(
         cmd=[
             'xacro',
@@ -114,7 +115,7 @@ def generate_launch_description():
         }]
     )
 
-    # ----- spawn (small delay to ensure /tmp/parrot.urdf exists) -----
+    # ----- spawn (start only AFTER URDF exists) -----
     spawn_drone = Node(
         package='ros_ign_gazebo',
         executable='create',
@@ -125,7 +126,14 @@ def generate_launch_description():
             '-file', tmp_urdf
         ]
     )
-    delayed_spawn = TimerAction(period=2.0, actions=[spawn_drone])
+
+    # Start RSP and spawn_drone only after gen_urdf completes successfully
+    start_after_urdf = RegisterEventHandler(
+        OnProcessExit(
+            target_action=gen_urdf,
+            on_exit=[rsp_node, spawn_drone]
+        )
+    )
 
     # ----- bridge (topics parameterized by drone_name) -----
     dn = LaunchConfiguration('drone_name')
@@ -161,8 +169,7 @@ def generate_launch_description():
         set_gz_resources,
         gazebo_proc,
         gen_urdf,
-        rsp_node,
-        delayed_spawn,
+        start_after_urdf,   # <-- ensures /tmp/parrot.urdf exists before using it
         bridge_node,
         rviz_node,
     ])
