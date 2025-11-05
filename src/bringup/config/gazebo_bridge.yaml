@@ -1,53 +1,39 @@
-# Bridge between Ignition/Gazebo topics and ROS 2 for drone1
-# This bridges all the stuff your launch already uses (cmd_vel, odom, imu, scan)
-# PLUS the camera topics so RViz can actually see an image.
-
-# ------------------------------------------------------------
-# drone1 core topics
-# ------------------------------------------------------------
-
 # velocity command (ROS <-> Gazebo)
 - topic_name: "/model/drone1/cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "ignition.msgs.Twist"
   direction: BIDIRECTIONAL
 
-# odom from Gazebo -> ROS
+# odom
 - topic_name: "/model/drone1/odometry"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "ignition.msgs.Odometry"
   direction: GZ_TO_ROS
 
-# imu from Gazebo -> ROS
+# imu
 - topic_name: "/model/drone1/imu"
   ros_type_name: "sensor_msgs/msg/Imu"
   gz_type_name: "ignition.msgs.IMU"
   direction: GZ_TO_ROS
 
-# lidar/scan from Gazebo -> ROS
+# lidar
 - topic_name: "/model/drone1/scan"
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "ignition.msgs.LaserScan"
   direction: GZ_TO_ROS
 
-# ------------------------------------------------------------
-# drone1 camera topics (this is what was missing)
-# ------------------------------------------------------------
+# ------------------------------------------------
+# CAMERA (bridge both possible image topics)
+# ------------------------------------------------
 
-# RGB image
+# 1) raw camera (some gz setups use this)
+- topic_name: "/model/drone1/camera"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: GZ_TO_ROS
+
+# 2) explicit image topic (your sim exposes this too)
 - topic_name: "/model/drone1/camera/image"
   ros_type_name: "sensor_msgs/msg/Image"
   gz_type_name: "ignition.msgs.Image"
-  direction: GZ_TO_ROS
-
-# depth image (optional — nice for perception)
-- topic_name: "/model/drone1/camera/depth_image"
-  ros_type_name: "sensor_msgs/msg/Image"
-  gz_type_name: "ignition.msgs.Image"
-  direction: GZ_TO_ROS
-
-# point cloud (optional — depends on sensor plugin)
-- topic_name: "/model/drone1/camera/points"
-  ros_type_name: "sensor_msgs/msg/PointCloud2"
-  gz_type_name: "ignition.msgs.PointCloudPacked"
   direction: GZ_TO_ROS

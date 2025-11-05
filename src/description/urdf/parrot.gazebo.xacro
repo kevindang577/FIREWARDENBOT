@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
-<robot name="parrot_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
-  <!-- Let us pick the gazebo model name so topics become /model/<name>/... -->
-  <xacro:arg name="model_name" default="drone1"/>
+<robot name="parrot" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:arg name="laser_visual"  default="false" />
   <xacro:arg name="camera_visual" default="false"/>
   <xacro:arg name="imu_visual"    default="false"/>
+
+  <!-- keep the drone from slowly falling, optional -->
+  <gazebo reference="base_link">
+    <gravity>0</gravity>
+  </gazebo>
 
   <!-- IMU -->
   <gazebo reference="imu_link">
@@ -12,8 +15,7 @@
       <always_on>true</always_on>
       <visualize>$(arg imu_visual)</visualize>
       <update_rate>100</update_rate>
-      <!-- CHANGED -->
-      <topic>/model/$(arg model_name)/imu</topic>
+      <topic>/model/drone1/imu</topic>
       <gz_frame_id>imu_link</gz_frame_id>
       <imu>
         <angular_velocity>
@@ -76,41 +78,38 @@
     </sensor>
     <material>Gazebo/Grey</material>
   </gazebo>
- 
-  <!-- Velocity control -->
+
+  <!-- velocity control plugin -->
   <gazebo>
     <plugin
       filename="ignition-gazebo-velocity-control-system"
       name="ignition::gazebo::systems::VelocityControl">
-      <!-- CHANGED -->
-      <topic>/model/$(arg model_name)/cmd_vel</topic>
+      <topic>/model/drone1/cmd_vel</topic>
     </plugin>
   </gazebo>
 
-  <!-- Odometry publisher -->
+  <!-- odometry publisher -->
   <gazebo>
     <plugin
       filename="ignition-gazebo-odometry-publisher-system"
       name="ignition::gazebo::systems::OdometryPublisher">
-      <!-- CHANGED -->
-      <topic>/model/$(arg model_name)/odometry</topic>
+      <topic>/model/drone1/odometry</topic>
       <odom_publish_frequency>20</odom_publish_frequency>
       <odom_frame>odom</odom_frame>
       <robot_base_frame>base_link</robot_base_frame>
     </plugin>
   </gazebo>
 
-  <!-- Joint states -->
+  <!-- joint states -->
   <gazebo>
     <plugin
       filename="ignition-gazebo-joint-state-publisher-system"
       name="ignition::gazebo::systems::JointStatePublisher">
-      <!-- CHANGED -->
-      <topic>/model/$(arg model_name)/joint_states</topic>
+      <topic>/model/drone1/joint_states</topic>
     </plugin>
   </gazebo>
 
-  <!-- Sensors system -->
+  <!-- sensors plugin (needed for camera/lidar) -->
   <gazebo>
     <plugin
         filename="libignition-gazebo-sensors-system.so"
@@ -118,14 +117,13 @@
     </plugin>
   </gazebo>
 
-  <!-- Lidar -->
+  <!-- LIDAR -->
   <gazebo reference="base_scan">
     <material>Gazebo/FlatBlack</material>
     <sensor type="gpu_lidar" name="lidar">
       <pose relative_to='base_scan'>0 0 0 0 0 0</pose>
       <visualize>$(arg laser_visual)</visualize>
-      <!-- CHANGED -->
-      <topic>/model/$(arg model_name)/scan</topic>
+      <topic>/model/drone1/scan</topic>
       <update_rate>3</update_rate>
       <gz_frame_id>base_scan</gz_frame_id>
       <ray>
@@ -152,31 +150,26 @@
     </sensor>
   </gazebo>
 
-  <!-- Camera -->
+  <!-- CAMERA: simplified to plain camera -->
   <gazebo reference="camera_link">
-    <sensor name="rgbd_camera" type="rgbd_camera">
+    <sensor name="front_camera" type="camera">
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <visualize>$(arg camera_visual)</visualize>
       <camera>
-        <horizontal_fov>2.0944</horizontal_fov>
+        <horizontal_fov>1.047</horizontal_fov>
         <image>
-          <width>720</width>
+          <width>640</width>
           <height>480</height>
+          <format>R8G8B8</format>
         </image>
         <clip>
           <near>0.1</near>
-          <far>40</far>
+          <far>50</far>
         </clip>
-        <depth_camera>
-          <clip>
-            <near>0.4</near>
-            <far>10</far>
-          </clip>
-        </depth_camera>
       </camera>
-      <always_on>1</always_on>
-      <update_rate>3</update_rate>
-      <visualize>$(arg camera_visual)</visualize>
-      <!-- CHANGED -->
-      <topic>/model/$(arg model_name)/camera</topic>
+      <!-- must match gazebo_bridge.yaml -->
+      <topic>/model/drone1/camera</topic>
       <gz_frame_id>camera_link</gz_frame_id>
     </sensor>
   </gazebo>
