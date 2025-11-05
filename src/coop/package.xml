@@ -2,19 +2,17 @@
 <package format="3">
   <name>coop</name>
   <version>0.0.0</version>
-  <description>Cooperative coverage nodes</description>
+  <description>Cooperative / reactive drone nodes</description>
 
   <maintainer email="student@example.com">student</maintainer>
-  <license>Apache-2.0</license>
+  <license>TODO</license>
 
-  <!-- this tells colcon we are a python package -->
   <buildtool_depend>ament_python</buildtool_depend>
 
-  <!-- runtime deps -->
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>nav_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>

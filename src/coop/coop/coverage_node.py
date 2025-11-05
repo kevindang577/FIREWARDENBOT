@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import math
-import time
 
 import rclpy
 from rclpy.node import Node
@@ -11,12 +10,19 @@ from geometry_msgs.msg import Twist
 
 
 class SingleDroneCoverage(Node):
+    """
+    Simple online coverage for ONE drone:
+    - keeps a 2D grid of seen cells
+    - updates from lidar
+    - finds nearest frontier (but not the cell we stand on)
+    - drives toward it
+    """
     def __init__(self):
         super().__init__('single_drone_coverage')
 
-        # params
-        self.declare_parameter('world_size', 20.0)
-        self.declare_parameter('resolution', 0.1)
+        # parameters
+        self.declare_parameter('world_size', 20.0)   # meters (square)
+        self.declare_parameter('resolution', 0.1)    # meters per cell
         self.declare_parameter('scan_topic', '/model/drone1/scan')
         self.declare_parameter('odom_topic', '/model/drone1/odometry')
         self.declare_parameter('cmd_vel_topic', '/model/drone1/cmd_vel')
@@ -27,20 +33,21 @@ class SingleDroneCoverage(Node):
         self.odom_topic = self.get_parameter('odom_topic').value
         self.cmd_vel_topic = self.get_parameter('cmd_vel_topic').value
 
-        # grid
+        # grid setup
         self.grid_size = int(world_size / self.resolution)
         self.world_origin_x = -world_size / 2.0
         self.world_origin_y = -world_size / 2.0
-        self.coverage = [[0 for _ in range(self.grid_size)] for _ in range(self.grid_size)]
 
-        self.current_pose = None
-        self.target_cell = None
+        # 0 = unseen, 1 = seen
+        self.coverage = [
+            [0 for _ in range(self.grid_size)]
+            for _ in range(self.grid_size)
+        ]
+
+        self.current_pose = None     # (x, y, yaw)
+        self.target_cell = None      # (gx, gy)
         self.got_scan = False
         self.got_odom = False
-
-        # manual log throttle
-        self.last_wait_log = 0.0
-        self.last_done_log = 0.0
 
         # subs
         self.create_subscription(Odometry, self.odom_topic, self.odom_cb, 10)
@@ -53,8 +60,8 @@ class SingleDroneCoverage(Node):
         self.create_timer(0.1, self.control_loop)
 
         self.get_logger().info('coverage_node (single drone) started')
-    # ---------------- callbacks ----------------
 
+    # -------------------- callbacks --------------------
     def odom_cb(self, msg: Odometry):
         x = msg.pose.pose.position.x
         y = msg.pose.pose.position.y
@@ -63,7 +70,7 @@ class SingleDroneCoverage(Node):
         self.current_pose = (x, y, yaw)
         if not self.got_odom:
             self.got_odom = True
-            self.get_logger().info(f'Got first odom: ({x:.2f}, {y:.2f}, {yaw:.2f})')
+            self.get_logger().info(f'Got first odometry: ({x:.2f}, {y:.2f}, yaw={yaw:.2f})')
 
     def scan_cb(self, msg: LaserScan):
         if self.current_pose is None:
@@ -95,27 +102,21 @@ class SingleDroneCoverage(Node):
 
             angle += msg.angle_increment
 
-    # --------------- control loop ---------------
+    # -------------------- control loop --------------------
     def control_loop(self):
-        now = time.time()
-
-        # wait for both streams
+        # don’t do anything until we have both
         if not self.got_odom or not self.got_scan:
-            if now - self.last_wait_log > 5.0:
-                self.get_logger().info('Waiting for odom + scan...')
-                self.last_wait_log = now
+            # log rarely so we know why it's idle
+            self.get_logger().info_throttle(5.0, 'Waiting for odom and scan...')
             return
 
         if self.current_pose is None:
             return
 
-        # need a target?
         if self.target_cell is None:
             frontier = self.find_frontier_cell()
             if frontier is None:
-                if now - self.last_done_log > 5.0:
-                    self.get_logger().info('No frontier found — maybe covered.')
-                    self.last_done_log = now
+                self.get_logger().info_throttle(5.0, 'No frontier found — coverage complete?')
                 self.cmd_pub.publish(Twist())
                 return
             self.target_cell = frontier
@@ -135,9 +136,8 @@ class SingleDroneCoverage(Node):
         dy = ty - y
         dist = math.hypot(dx, dy)
 
-        # close enough
         if dist < 0.25:
-            self.get_logger().info(f'Reached target ({tx:.2f}, {ty:.2f}), picking new one')
+            self.get_logger().info(f'Reached target ({tx:.2f}, {ty:.2f})')
             self.target_cell = None
             self.cmd_pub.publish(Twist())
             return
@@ -151,8 +151,11 @@ class SingleDroneCoverage(Node):
             cmd.linear.x = min(0.6, dist)
 
         self.cmd_pub.publish(cmd)
-    # --------------- frontier search ---------------
+
+    # -------------------- frontier search --------------------
     def find_frontier_cell(self):
+        """Pick a seen cell that has an unseen neighbor,
+        but skip cells too close to the robot so we actually move."""
         if self.current_pose is None:
             return None
 
@@ -161,7 +164,7 @@ class SingleDroneCoverage(Node):
 
         best = None
         best_d2 = 1e18
-        min_cells = 3
+        min_cells = 3  # <- skip cells within 3 cells of the robot
 
         for gy in range(self.grid_size):
             row = self.coverage[gy]
@@ -173,7 +176,7 @@ class SingleDroneCoverage(Node):
 
                 d2 = (gx - rgx) ** 2 + (gy - rgy) ** 2
                 if d2 < min_cells * min_cells:
-                    continue
+                    continue  # too close, we'd “arrive” instantly
 
                 if d2 < best_d2:
                     best_d2 = d2
@@ -193,7 +196,7 @@ class SingleDroneCoverage(Node):
                 return True
         return False
 
-    # --------------- utils ---------------
+    # -------------------- helpers --------------------
     def world_to_grid(self, x, y):
         gx = int((x - self.world_origin_x) / self.resolution)
         gy = int((y - self.world_origin_y) / self.resolution)
