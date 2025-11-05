@@ -1,33 +1,26 @@
 from setuptools import setup
-import os
-from glob import glob
 
 package_name = 'coop'
 
 setup(
     name=package_name,
-    version='0.0.1',
-    packages=[package_name],  # this expects src/coop/coop/__init__.py
+    version='0.0.0',
+    packages=[package_name],
     data_files=[
-        # so ROS 2 can discover the package
         ('share/ament_index/resource_index/packages',
-         ['resource/' + package_name]),
-        # install package.xml
+            ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        # install launch files if you have any
-        (os.path.join('share', package_name, 'launch'),
-         glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Kevin Dang',
-    maintainer_email='kevin@example.com',
-    description='Cooperative multi-drone coordination for FIREWARDENBOT.',
+    maintainer='student',
+    maintainer_email='student@example.com',
+    description='Cooperative coverage nodes',
     license='Apache-2.0',
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # this is what should create install/coop/lib/coop/coverage_manager
-            'coverage_manager = coop.coverage_manager:main',
+            'coverage_node = coop.coverage_node:main',
         ],
     },
 )
