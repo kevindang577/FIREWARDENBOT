@@ -14,10 +14,10 @@ def test_imports():
     # Test basic imports
     try:
         import cv2
-        print("✅ OpenCV imported successfully")
+        print(" OpenCV imported successfully")
         print(f"   OpenCV version: {cv2.__version__}")
     except ImportError as e:
-        print(f"❌ OpenCV import failed: {e}")
+        print(f" OpenCV import failed: {e}")
         return False
     
     try:
@@ -39,14 +39,14 @@ def test_imports():
         from sensor_msgs.msg import Image
         print("✅ ROS 2 sensor_msgs imported successfully")
     except ImportError as e:
-        print(f"❌ ROS 2 sensor_msgs import failed: {e}")
+        print(f" ROS 2 sensor_msgs import failed: {e}")
         return False
     
     try:
         from cv_bridge import CvBridge
         print("✅ cv_bridge imported successfully")
     except ImportError as e:
-        print(f"❌ cv_bridge import failed: {e}")
+        print(f" cv_bridge import failed: {e}")
         print("   Note: cv_bridge is needed to convert ROS images to OpenCV format")
         return False
     

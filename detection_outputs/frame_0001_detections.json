@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-11-06T00:00:29.395149",
+  "frame_id": "frame_0001",
+  "total_detections": 4,
+  "detections": [
+    {
+      "color_category": "bright_orange",
+      "area_pixels": 1178,
+      "center_pixel": [
+        158,
+        194
+      ],
+      "confidence": 1.0,
+      "bounding_box": [
+        125,
+        185,
+        50,
+        30
+      ]
+    },
+    {
+      "color_category": "yellow_orange",
+      "area_pixels": 754,
+      "center_pixel": [
+        343,
+        149
+      ],
+      "confidence": 0.8282245177058319,
+      "bounding_box": [
+        330,
+        138,
+        40,
+        24
+      ]
+    },
+    {
+      "color_category": "red_orange",
+      "area_pixels": 1256,
+      "center_pixel": [
+        505,
+        307
+      ],
+      "confidence": 0.8819781069244491,
+      "bounding_box": [
+        482,
+        278,
+        36,
+        44
+      ]
+    },
+    {
+      "color_category": "brown",
+      "area_pixels": 1178,
+      "center_pixel": [
+        191,
+        358
+      ],
+      "confidence": 0.6346901384542663,
+      "bounding_box": [
+        185,
+        325,
+        30,
+        50
+      ]
+    }
+  ]
+}

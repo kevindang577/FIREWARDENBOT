@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-11-06T00:00:29.407047",
+  "frame_id": "frame_0003",
+  "total_detections": 4,
+  "detections": [
+    {
+      "color_category": "bright_orange",
+      "area_pixels": 1178,
+      "center_pixel": [
+        150,
+        205
+      ],
+      "confidence": 0.8769902430934758,
+      "bounding_box": [
+        125,
+        185,
+        50,
+        30
+      ]
+    },
+    {
+      "color_category": "yellow_orange",
+      "area_pixels": 754,
+      "center_pixel": [
+        359,
+        144
+      ],
+      "confidence": 0.8404020224671557,
+      "bounding_box": [
+        330,
+        138,
+        40,
+        24
+      ]
+    },
+    {
+      "color_category": "red_orange",
+      "area_pixels": 1256,
+      "center_pixel": [
+        503,
+        304
+      ],
+      "confidence": 1.0,
+      "bounding_box": [
+        482,
+        278,
+        36,
+        44
+      ]
+    },
+    {
+      "color_category": "brown",
+      "area_pixels": 1178,
+      "center_pixel": [
+        204,
+        341
+      ],
+      "confidence": 0.6854249358762817,
+      "bounding_box": [
+        185,
+        325,
+        30,
+        50
+      ]
+    }
+  ]
+}

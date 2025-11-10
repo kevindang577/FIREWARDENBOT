@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'leaf_detector = vision.leaf_detector:main',
             'leaf_monitor = vision.leaf_monitor:main',
+            'enhanced_lidar_processor = vision.enhanced_lidar_processor:main',
         ],
     },
 )

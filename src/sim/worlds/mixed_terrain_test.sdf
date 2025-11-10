@@ -47,11 +47,32 @@
     </spherical_coordinates>
 
     <!-- Ground plane -->
-    <include>
-      <uri>model://forest_plane</uri>
-      <name>forest_ground_main</name>
+    <model name="ground_plane">
+      <static>true</static>
       <pose>0 0 0 0 0 0</pose>
-    </include>
+      <link name="ground_link">
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>40 40</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>40 40</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.3 0.7 0.3 1</ambient>
+            <diffuse>0.3 0.7 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
 
     <!-- Basic trees -->
     <include>
