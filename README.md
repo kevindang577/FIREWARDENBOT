@@ -161,21 +161,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Nav2 team for navigation stack
 - OpenCV community for computer vision tools
 
-## 📞 Support
-
-For questions and support:
-- 📧 Email: [your.email@example.com]
-- 🐛 Issues: [GitHub Issues](https://github.com/kevindang577/FIREWARDENBOT/issues)
-- 📖 Docs: [Technical Report](COMPREHENSIVE_TECHNICAL_REPORT.md)
-
-## 🔄 Latest Updates
-
-- ✅ Added comprehensive system architecture documentation
-- ✅ Implemented component summary table with ROS 2 topic mapping
-- ✅ Updated project README with detailed installation instructions
-- ✅ Enhanced .gitignore for ROS 2 project structure
-- 🔄 Testing GitHub commit functionality - November 2025
-
 ## 🌟 Project Status
 - **Development Phase**: Active
 - **Last Updated**: November 12, 2025
