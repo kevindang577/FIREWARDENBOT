@@ -133,26 +133,14 @@ Modify Nav2 parameters in `src/bringup/config/nav2_params.yaml`
 ros2 launch vision vision_system.launch.py
 ros2 launch bringup navigation.launch.py
 ros2 launch bringup slam_mapping.launch.py
+
+# Demo Launch
+ros2 run coop lidar_reactive
+ros2 launch bringup sim_one_drone.launch.py world:=sparse_forest.sdf drone_name:=drone1
+
+Note: Run lidar_reactive first for best consistent test results.
+
 ```
-
-## 📊 Performance
-
-- **Real-time Operation**: <100ms latency
-- **Map Resolution**: 0.05m per pixel
-- **Detection Rate**: 30 FPS processing
-- **Web Interface**: <1s update rates
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
