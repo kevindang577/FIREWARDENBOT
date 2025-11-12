@@ -168,6 +168,13 @@ For questions and support:
 - 🐛 Issues: [GitHub Issues](https://github.com/kevindang577/FIREWARDENBOT/issues)
 - 📖 Docs: [Technical Report](COMPREHENSIVE_TECHNICAL_REPORT.md)
 
+## 🔄 Latest Updates
+
+- ✅ Added comprehensive system architecture documentation
+- ✅ Implemented component summary table with ROS 2 topic mapping
+- ✅ Updated project README with detailed installation instructions
+- ✅ Enhanced .gitignore for ROS 2 project structure
+
 ---
 
 **🔥 Fire Warden Bot - Protecting forests through autonomous technology 🌲**
